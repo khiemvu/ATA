@@ -6,4 +6,17 @@
     <string name="vehicleAccident">Vehicle Accident</string>
     <string name="vehicleServicing">Vehicle Servicing</string>
     <string name="contactFTAFleet">Contact FTA Fleet</string>
+    <string name="accidentDetail">Accident Details</string>
+    <string name="myVehicleDetail">My Vehicle Details</string>
+    <string name="addOtherVehicleDetails">Add Other Vehicle Details</string>
+    <string name="witnesses">Witnesses</string>
+    <string name="police">Police</string>
+    <string name="otherVehicle">Other Vehicle</string>
+    <string name="addWitness">Add Witness</string>
+    <string name="myWitness">My Witness</string>
+    <string name="witnessesDetail">Witnesses Detail</string>
+    <string name="photoList">Photo List</string>
+    <string name="ataFleetTow">ATA FLeet Tow</string>
+    <string name="needHelpNow">Need Help Now ?</string>
+    <string name="bookServices">Book Services</string>
 </resources>

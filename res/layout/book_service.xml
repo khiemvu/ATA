@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/back_ground_bt_blue_2x"
+            >
+        <ImageView
+                android:id="@+id/book_service_btBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bt_back_2x"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                />
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                style="@style/text_while"
+                android:textSize="@dimen/_25dp"
+                android:text="@string/bookServices"
+                />
+    </RelativeLayout>
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5dp"
+                android:orientation="vertical">
+            <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            <EditText
+                    android:id="@+id/book_service_edtKilometer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/text_while"
+                    android:textSize="@dimen/_20dp"
+                    android:background="@drawable/edt_background"
+                    android:hint="Witness Name"
+                    android:layout_marginTop="@dimen/_5dp"/>
+            <EditText
+                    android:id="@+id/book_service_edtWitnessPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/text_while"
+                    android:textSize="@dimen/_20dp"
+                    android:background="@drawable/edt_background"
+                    android:hint="Witness Phone"
+                    android:layout_marginTop="@dimen/_5dp"/>
+
+            <EditText
+                    android:id="@+id/book_service_edtWitnessEmailId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/text_while"
+                    android:textSize="@dimen/_20dp"
+                    android:background="@drawable/edt_background"
+                    android:hint="Witness Email Id"
+                    android:layout_marginTop="@dimen/_5dp"/>
+            <EditText
+                    android:id="@+id/book_service_edtWitnessAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/text_while"
+                    android:textSize="@dimen/_20dp"
+                    android:background="@drawable/edt_background"
+                    android:hint="Witness Address"
+                    android:layout_marginTop="@dimen/_5dp"/>
+            <EditText
+                    android:id="@+id/book_service_edtWitnessAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/text_while"
+                    android:textSize="@dimen/_20dp"
+                    android:background="@drawable/edt_background"
+                    android:hint="Witness Address"
+                    android:layout_marginTop="@dimen/_5dp"/>
+            <EditText
+                    android:id="@+id/book_service_edtWitnessAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/text_while"
+                    android:textSize="@dimen/_20dp"
+                    android:background="@drawable/edt_background"
+                    android:hint="Witness Address"
+                    android:layout_marginTop="@dimen/_5dp"/>
+            <EditText
+                    android:id="@+id/book_service_edtWitnessAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/text_while"
+                    android:textSize="@dimen/_20dp"
+                    android:background="@drawable/edt_background"
+                    android:hint="Witness Address"
+                    android:layout_marginTop="@dimen/_5dp"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
