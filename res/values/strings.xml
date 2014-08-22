@@ -37,8 +37,9 @@
     <string name="rego_reminder">Rego Reminder</string>
     <string name="rego_renewal_date">Rego Renewal Date</string>
     <string name="select_date">SELECT DATE</string>
-    <string name="enter_your_rego">Enter your Rego Date We'll remind you when the date is close by.</string>
+    <string name="enter_your_rego">Enter your Rego Date Well remind you when the date is close by.</string>
     <string name="save">Save</string>
     <string name="select">Select</string>
     <string name="delete">Delete</string>
+    <string name="photo">Photo</string>
 </resources>
