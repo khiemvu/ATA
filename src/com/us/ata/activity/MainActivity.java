@@ -1,7 +1,8 @@
-package com.us.ata;
+package com.us.ata.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
+import com.us.ata.R;
 
 public class MainActivity extends Activity
 {
