@@ -6,4 +6,28 @@
     <string name="vehicleAccident">Vehicle Accident</string>
     <string name="vehicleServicing">Vehicle Servicing</string>
     <string name="contactFTAFleet">Contact FTA Fleet</string>
+    <string name="enter_your_details">Enter your details before driving vehicle</string>
+    <string name="add_vehicle">Add Vehicles</string>
+    <string name="my_vehicle">My Vehicle</string>
+    <string name="name">NAME</string>
+    <string name="rego">REGO#</string>
+    <string name="make">MAKE</string>
+    <string name="model">MODEL</string>
+    <string name="phone">PHONE</string>
+    <string name="address">ADDRESS</string>
+    <string name="rego_date">REGO DATE</string>
+    <string name="insurance_detail">MY INSURANCE DETAILS</string>
+    <string name="insurance_company">INSURANCE COMPANY</string>
+    <string name="policy">POLICY</string>
+    <string name="insurance_phone">INSURANCE PHONE</string>
+    <string name="broker">BROKER (if any)</string>
+    <string name="rego_reminder">Rego Reminder</string>
+    <string name="rego_renewal_date">Rego Renewal Date</string>
+    <string name="select_date">SELECT DATE</string>
+    <string name="enter_your_rego">Enter your Rego Date We'll remind you when the date is close by.</string>
+    <string name="save">Save</string>
+    <string name="select">Select</string>
+    <string name="delete">Delete</string>
+
+
 </resources>

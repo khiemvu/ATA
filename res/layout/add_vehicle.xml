@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_header_2x"
+            >
+        <ImageView
+                android:layout_marginLeft="@dimen/_5dp"
+                android:id="@+id/vehicle_detail_btBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bt_back_2x"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                />
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/add_vehicle"
+                style="@style/text_while"
+                />
+    </RelativeLayout>
+    <LinearLayout android:layout_height="match_parent"
+                  android:layout_width="match_parent"
+                  android:layout_marginTop="@dimen/_15dp"
+                  android:layout_marginLeft="@dimen/_5dp"
+                  android:layout_marginRight="@dimen/_5dp"
+                  android:orientation="vertical">
+        <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/name"
+                android:id="@+id/add_vehicle_etName"
+                android:background="@drawable/bg_edit_text"
+                style="@style/text_while"
+                android:layout_gravity="center_horizontal|top"/>
+
+        <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_7dp"
+                android:hint="@string/rego"
+                android:id="@+id/add_vehicle_etRego"
+                android:background="@drawable/bg_edit_text"
+                style="@style/text_while"
+                android:layout_gravity="center_horizontal|top"/>
+
+        <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_7dp"
+                android:hint="@string/make"
+                android:id="@+id/add_vehicle_etMake"
+                android:background="@drawable/bg_edit_text"
+                style="@style/text_while"
+                android:layout_gravity="center_horizontal|top"/>
+
+        <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_7dp"
+                android:hint="@string/model"
+                android:id="@+id/add_vehicle_etModel"
+                android:background="@drawable/bg_edit_text"
+                style="@style/text_while"
+                android:layout_gravity="center_horizontal|top"/>
+
+        <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_7dp"
+                android:hint="@string/phone"
+                android:id="@+id/add_vehicle_etPhone"
+                android:background="@drawable/bg_edit_text"
+                style="@style/text_while"
+                android:layout_gravity="center_horizontal|top"/>
+
+        <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_7dp"
+                android:hint="@string/address"
+                android:id="@+id/add_vehicle_etAddress"
+                android:background="@drawable/bg_edit_text"
+                style="@style/text_while"
+                android:layout_gravity="center_horizontal|top"/>
+
+        <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_7dp"
+                android:hint="@string/rego_date"
+                android:id="@+id/add_vehicle_etRegoDate"
+                android:background="@drawable/bg_edit_text"
+                android:drawableRight="@drawable/right_arrow_mem_detail"
+                style="@style/text_while"
+                android:layout_gravity="center_horizontal|top"/>
+
+        <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20dp"
+                android:layout_marginBottom="@dimen/_20dp"
+                android:hint="@string/insurance_detail"
+                android:id="@+id/add_vehicle_tvInsuranceDetail"
+                style="@style/text_while"
+                android:layout_gravity="center_horizontal|top"/>
+
+        <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_7dp"
+                android:hint="@string/insurance_company"
+                android:id="@+id/add_vehicle_etInsuranceCompany"
+                android:background="@drawable/bg_edit_text"
+                style="@style/text_while"
+                android:layout_gravity="center_horizontal|top"/>
+
+        <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_7dp"
+                android:hint="@string/policy"
+                android:id="@+id/add_vehicle_etPolicy"
+                android:background="@drawable/bg_edit_text"
+                style="@style/text_while"
+                android:layout_gravity="center_horizontal|top"/>
+
+        <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_7dp"
+                android:hint="@string/insurance_phone"
+                android:id="@+id/add_vehicle_etInsurancePhone"
+                android:background="@drawable/bg_edit_text"
+                style="@style/text_while"
+                android:layout_gravity="center_horizontal|top"/>
+
+        <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_7dp"
+                android:hint="@string/broker"
+                android:id="@+id/add_vehicle_etBroker"
+                android:background="@drawable/bg_edit_text"
+                style="@style/text_while"
+                android:layout_gravity="center_horizontal|top"/>
+
+        <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_7dp"
+                android:background="@drawable/bg_edit_text"
+                >
+
+            <Button
+                    android:layout_centerInParent="true"
+                    android:layout_width="@dimen/_280dp"
+                    android:text="@string/save"
+                    android:id="@+id/bt_addVehicle"
+                    android:background="@drawable/background_bt_blue"
+                    style="@style/text_while"
+                    android:layout_height="wrap_content"/>
+            />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -21,42 +21,49 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:text="@string/titleVehicleDetail"
+                android:text="@string/rego_reminder"
                 style="@style/text_while"
                 />
     </RelativeLayout>
     <TextView
-            android:layout_marginTop="@dimen/_30dp"
-            android:layout_width="@dimen/_260dp"
+            android:layout_marginTop="@dimen/_50dp"
+            android:layout_width="@dimen/_160dp"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
             android:layout_gravity="center"
-            android:text="@string/enter_your_details"
+            android:text="@string/rego_renewal_date"
             style="@style/text_while"
+            android:textSize="@dimen/_16dp"
             />
-
-    <TextView
-            android:layout_marginTop="@dimen/_20dp"
-            android:layout_height="@dimen/_4dp"
-            android:layout_width="match_parent"
-            android:background="@drawable/line"/>
 
     <Button
             android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_marginTop="@dimen/_40dp"
-            android:text="@string/add_vehicle"
-            android:id="@+id/bt_addVehicle"
+            android:text="@string/select_date"
+            android:id="@+id/rego_remind_btSelectDate"
             android:background="@drawable/back_ground_bt_blue_2x"
             style="@style/text_while"
             android:layout_height="wrap_content"/>
     />
+
+    <TextView
+            android:layout_marginTop="@dimen/_50dp"
+            android:layout_width="@dimen/_280dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_gravity="center"
+            android:text="@string/enter_your_rego"
+            style="@style/text_while"
+            android:textSize="@dimen/_16dp"
+            />
+
     <Button
             android:layout_gravity="center"
             android:layout_width="wrap_content"
-            android:layout_marginTop="@dimen/_20dp"
-            android:text="@string/my_vehicle"
-            android:id="@+id/bt_viewVehicleDetail"
+            android:layout_marginTop="@dimen/_50dp"
+            android:text="@string/save"
+            android:id="@+id/rego_remind_btSave"
             android:background="@drawable/back_ground_bt_blue_2x"
             style="@style/text_while"
             android:layout_height="wrap_content"/>
