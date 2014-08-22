@@ -12,88 +12,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14a05474-9a42-4fac-baa5-4f4d7f3a7872" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/Images/MemberController/view_Ctrl_1/1-main.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/Images/MemberController/Member_List/2-main.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/Images/MemberController/view_Ctrl_1/BG.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/Images/MemberController/view_Ctrl_1/BG@2x.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/Images/MemberController/Member_List/Back.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/Images/MemberController/Member_List/Back@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/Images/Had A Crash Details/Cell_BG.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/Images/Had A Crash Details/Cell_BG@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/Images/Default_Screen/Default-568h@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/Images/Default_Screen/Default.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/Images/Default_Screen/Default@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/Images/MemberController/Member_Details/Green_Title_BG.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/Images/MemberController/Member_Details/Green_Title_BG@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/Images/MemberController/Member_List/Header.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/Images/MemberController/Member_List/Header@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/follow/IMG_0030.PNG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/follow/IMG_0031.PNG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/follow/IMG_0032.PNG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/follow/IMG_0033.PNG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/follow/IMG_0034.PNG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/follow/IMG_0035.PNG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/follow/IMG_0036.PNG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/follow/IMG_0037.PNG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/follow/IMG_0038.PNG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/follow/IMG_0039.PNG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/follow/IMG_0040.PNG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/follow/IMG_0041.PNG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/follow/IMG_0042.PNG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/follow/IMG_0043.PNG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/follow/IMG_0044.PNG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/follow/IMG_0045.PNG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/follow/IMG_0046.PNG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/follow/IMG_0047.PNG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/follow/IMG_0048.PNG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/follow/IMG_0049.PNG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/follow/IMG_0050.PNG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/follow/IMG_0051.PNG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/follow/IMG_0052.PNG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/follow/IMG_0053.PNG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/follow/IMG_0054.PNG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/follow/IMG_0055.PNG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/Images/Icons/Icon-1024.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/Images/Icons/NewIcons/Icon-72.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/Images/Icons/NewIcons/Icon-72@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/Images/Icons/NewIcons/Icon-Small-40@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/Images/Icons/NewIcons/Icon-Small-50.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/Images/Icons/NewIcons/Icon-Small-50@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/Images/Icons/NewIcons/Icon-Small.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/Images/Icons/NewIcons/Icon-Small@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/Images/Icons/NewIcons/Icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/Images/Icons/NewIcons/Icon@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/Images/MemberController/Member_Details/Left_Arrow_Mem_Details.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/Images/MemberController/Member_Details/Left_Arrow_Mem_Details@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/Images/MemberController/Member_List/Line.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/Images/MemberController/Member_List/Line@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/Images/Had A Crash Details/Red_BG.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/Images/Had A Crash Details/Red_BG@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/Images/MemberController/Member_Details/Right_Arrow_Mem_Details.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/Images/MemberController/Member_Details/Right_Arrow_Mem_Details@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/Images/Had A Crash Details/Small_Blue_Btn_BG.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/Images/Had A Crash Details/Small_Blue_Btn_BG@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/Images/MemberController/Member_Details/Small_Btn_BG_Mem_Detals.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/Images/MemberController/Member_Details/Small_Btn_BG_Mem_Detals@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/Images/Had A Crash Details/Small_Green_Btn_BG.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/Images/Had A Crash Details/Small_Green_Btn_BG@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/Images/Had A Crash Details/Small_Red_Btn_BG.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/Images/Had A Crash Details/Small_Red_Btn_BG@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/Images/MemberController/view_Ctrl_1/Title_BG.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/Images/MemberController/view_Ctrl_1/Title_BG@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/Images/MemberController/Member_Details/Title_BG_Mem_Details.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/Images/MemberController/Member_Details/Title_BG_Mem_Details@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/Images/MemberController/Member_List/arrow.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/Images/MemberController/Member_List/arrow@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/Images/Icons/iTunesArtwork.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/Images/Icons/NewIcons/icon-60@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/Images/Icons/NewIcons/icon_76x76.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/source/Images/Had A Crash Details/newLogo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/values/themes.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/background.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/values/styles.xml" />
+      <change type="DELETED" beforePath="E:\Android\Free\ATAProject\res\values\themes.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="E:\Android\Free\ATAProject\src\com\us\ata\MainActivity.java" afterPath="$PROJECT_DIR$/src/com/us/ata/activity/MainActivity.java" />
     </list>
     <ignored path="ATAProject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -160,7 +84,7 @@
       <file leaf-file-name="main.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="41" selection-start="461" selection-end="461" vertical-scroll-proportion="-8.84" vertical-offset="0" max-vertical-offset="323">
+            <state line="13" column="0" selection-start="461" selection-end="461" vertical-scroll-proportion="-8.84" vertical-offset="0" max-vertical-offset="323">
               <folding />
             </state>
           </provider>
@@ -172,16 +96,19 @@
       <file leaf-file-name="AndroidManifest.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="54" selection-start="358" selection-end="358" vertical-scroll-proportion="0.1762963" vertical-offset="0" max-vertical-offset="675">
-              <folding />
+            <state line="17" column="27" selection-start="714" selection-end="714" vertical-scroll-proportion="0.6509009" vertical-offset="0" max-vertical-offset="444">
+              <folding>
+                <element signature="e#284#302#0" expanded="true" />
+                <element signature="e#441#459#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="themes.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/values/themes.xml">
+      <file leaf-file-name="styles.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/values/styles.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="51" selection-end="51" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="153">
+            <state line="3" column="14" selection-start="124" selection-end="124" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
               <folding />
             </state>
           </provider>
@@ -201,6 +128,7 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/res/values/themes.xml" />
+        <option value="$PROJECT_DIR$/res/values/style.xml" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
       </list>
     </option>
@@ -286,20 +214,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="source" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ATAProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ATAProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="res" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -358,10 +272,18 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="AndroidTargetDevices" value="192.168.56.101:5555" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Android\Free\ATAProject\res\drawable-hdpi" />
       <recent name="E:\Android\Free\ATAProject\source" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Android\Free\ATAProject\res\drawable-hdpi" />
     </key>
   </component>
@@ -594,6 +516,8 @@
       <option name="NETWORK_LATENCY" value="none" />
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <RunnerSettings RunnerId="AndroidDebugRunner" />
+      <ConfigurationWrapper RunnerId="AndroidDebugRunner" />
       <method />
     </configuration>
     <list size="1">
@@ -627,19 +551,24 @@
       <changelist id="14a05474-9a42-4fac-baa5-4f4d7f3a7872" name="Default" comment="" />
       <created>1408695115249</created>
       <updated>1408695115249</updated>
-      <workItem from="1408695126763" duration="1438000" />
+      <workItem from="1408695126763" duration="2993000" />
     </task>
+    <task id="LOCAL-00001" summary="add resource for app">
+      <created>1408696683419</created>
+      <updated>1408696683419</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1438000" />
+    <option name="totallyTimeSpent" value="2993000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="1" width="1598" height="858" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952926" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22337662" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -653,14 +582,15 @@
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952926" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32952926" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952926" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -680,9 +610,15 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
+    <MESSAGE value="add resource for app" />
+    <option name="LAST_COMMIT_MESSAGE" value="add resource for app" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/logo.png">
@@ -692,7 +628,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="41" selection-start="461" selection-end="461" vertical-scroll-proportion="-8.84" vertical-offset="0" max-vertical-offset="323">
+        <state line="13" column="0" selection-start="461" selection-end="461" vertical-scroll-proportion="-8.84" vertical-offset="0" max-vertical-offset="323">
           <folding />
         </state>
       </provider>
@@ -700,17 +636,25 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/themes.xml">
+    <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/background.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/styles.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="51" selection-end="51" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="153">
+        <state line="3" column="14" selection-start="124" selection-end="124" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="54" selection-start="358" selection-end="358" vertical-scroll-proportion="0.1762963" vertical-offset="0" max-vertical-offset="675">
-          <folding />
+        <state line="17" column="27" selection-start="714" selection-end="714" vertical-scroll-proportion="0.6509009" vertical-offset="0" max-vertical-offset="444">
+          <folding>
+            <element signature="e#284#302#0" expanded="true" />
+            <element signature="e#441#459#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
