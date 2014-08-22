@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">ATAProject</string>
+    <string name="titleVehicleDetail">My Vehicle Detail</string>
+    <string name="vehicleDetail">Vehicle Detail</string>
+    <string name="vehicleAccident">Vehicle Accident</string>
+    <string name="vehicleServicing">Vehicle Servicing</string>
+    <string name="contactFTAFleet">Contact FTA Fleet</string>
 </resources>

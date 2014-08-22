@@ -1,13 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="fill_parent"
-              android:layout_height="fill_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
         >
-    <TextView
-            android:layout_width="fill_parent"
+    <ImageView
+            android:layout_marginTop="@dimen/_20dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello World, MainActivity"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/imv_logo"
+            android:layout_gravity="center"
+            android:background="@drawable/logo"
             />
-</LinearLayout>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_marginTop="@dimen/_20dp"
+            android:layout_centerInParent="true"
+            android:layout_below="@+id/imv_logo"
+            android:text="@string/vehicleDetail"
+            android:id="@+id/bt_vehicleDetail"
+            android:background="@drawable/back_ground_bt_blue_2x"
+            style="@style/text_while"
+            android:layout_height="wrap_content"/>
+    />
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/bt_vehicleDetail"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_20dp"
+            android:text="@string/vehicleAccident"
+            android:id="@+id/bt_vehicleAccident"
+            android:background="@drawable/back_ground_bt_blue_2x"
+            style="@style/text_while"
+            android:layout_height="wrap_content"/>
+    />
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/bt_vehicleAccident"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_20dp"
+            android:text="@string/vehicleServicing"
+            android:id="@+id/bt_vehicleServicing"
+            android:background="@drawable/back_ground_bt_blue_2x"
+            style="@style/text_while"
+            android:layout_height="wrap_content"/>
+    />
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/bt_vehicleServicing"
+            android:layout_marginTop="@dimen/_20dp"
+            android:layout_centerHorizontal="true"
+            android:text="@string/contactFTAFleet"
+            android:id="@+id/bt_ContactFTAFleet"
+            style="@style/text_while"
+            android:background="@drawable/back_ground_bt_blue_2x"
+            android:layout_height="wrap_content"/>
+</RelativeLayout>
 
