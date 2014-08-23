@@ -15,8 +15,8 @@ public class MainActivity extends Activity implements View.OnClickListener
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
-        initViewAndAction();
+        setContentView(R.layout.book_service);
+//        initViewAndAction();
     }
 
     private void initViewAndAction()

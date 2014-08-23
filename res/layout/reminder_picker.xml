@@ -29,8 +29,8 @@
                         android:id="@+id/dpReminder"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:calendarViewShown="false"/>
+                        android:layout_gravity="center"/>
+                <!--android:calendarViewShown="false"/>-->
             </LinearLayout>
 
             <LinearLayout

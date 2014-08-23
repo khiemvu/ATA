@@ -69,7 +69,7 @@ public class AddVehicleActivity extends Activity implements View.OnClickListener
             case R.id.add_vehicle_btSave:
                 //todo perform action save
                 break;
-            case R.id.vehicle_detail_btBack:
+            case R.id.add_vehicle_btBack:
                 finish();
                 break;
         }

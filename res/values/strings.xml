@@ -42,4 +42,14 @@
     <string name="select">Select</string>
     <string name="delete">Delete</string>
     <string name="photo">Photo</string>
+    <string name="map_location">Map Location</string>
+    <string name="ata_fleet">ATA Fleet</string>
+    <string name="address_location">81 Kurrajong Ave Mt Druitt NSW</string>
+    <string name="number_house">2770</string>
+    <string name="phone_number">Free Call: 1800 633 990</string>
+    <string name="email_repairer">Email Repairer</string>
+    <string name="sms_ata">SMS ATA</string>
+    <string name="dial_now">Dial Now</string>
+    <string name="get_direction">Get Direction</string>
+
 </resources>
