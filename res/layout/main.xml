@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-        >
+                android:layout_height="fill_parent">
     <ImageView
             android:layout_marginTop="@dimen/_20dp"
             android:layout_width="wrap_content"
@@ -22,7 +21,6 @@
             android:background="@drawable/back_ground_bt_blue_2x"
             style="@style/text_while"
             android:layout_height="wrap_content"/>
-    />
     <Button
             android:layout_width="wrap_content"
             android:layout_below="@+id/bt_vehicleDetail"
@@ -33,7 +31,6 @@
             android:background="@drawable/back_ground_bt_blue_2x"
             style="@style/text_while"
             android:layout_height="wrap_content"/>
-    />
     <Button
             android:layout_width="wrap_content"
             android:layout_below="@+id/bt_vehicleAccident"
@@ -44,7 +41,6 @@
             android:background="@drawable/back_ground_bt_blue_2x"
             style="@style/text_while"
             android:layout_height="wrap_content"/>
-    />
     <Button
             android:layout_width="wrap_content"
             android:layout_below="@+id/bt_vehicleServicing"
