@@ -33,9 +33,26 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/_5dp"
                 android:orientation="vertical">
-            <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <Button
+                        android:id="@+id/book_service_btSend"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/background_bt_blue"
+                        android:text="Send"
+                        style="@style/text_while"
+                        android:textSize="@dimen/_20dp"
+                        android:minHeight="@dimen/_40dp"/>
+                <ImageView
+                        android:id="@+id/book_service_ivRightClick"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/right_arrow_mem_detail_2x"
+                        android:layout_alignParentRight="true"/>
+            </RelativeLayout>
             <EditText
                     android:id="@+id/book_service_edtKilometer"
                     android:layout_width="match_parent"
@@ -43,16 +60,15 @@
                     style="@style/text_while"
                     android:textSize="@dimen/_20dp"
                     android:background="@drawable/edt_background"
-                    android:hint="Witness Name"
                     android:layout_marginTop="@dimen/_5dp"/>
             <EditText
-                    android:id="@+id/book_service_edtWitnessPhone"
+                    android:id="@+id/book_service_edtBookDate"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     style="@style/text_while"
                     android:textSize="@dimen/_20dp"
                     android:background="@drawable/edt_background"
-                    android:hint="Witness Phone"
+                    android:hint="Book Date"
                     android:layout_marginTop="@dimen/_5dp"/>
 
             <EditText
