@@ -12,7 +12,7 @@ public class Witness
 {
     public transient static final String TABLE_NAME = "WITNESS";
 
-    @DatabaseField(columnName = "_ID", id = true, generatedId = true)
+    @DatabaseField(columnName = "_ID", id = true)
     private String id;
     @DatabaseField(columnName = "CRASH_LOCATION")
     protected String crashLocation;

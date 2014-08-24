@@ -12,7 +12,7 @@ public class Vehicle
 {
     public transient static final String TABLE_NAME = "VEHICLE";
 
-    @DatabaseField(columnName = "_ID", id = true, generatedId = true)
+    @DatabaseField(columnName = "_ID", id = true)
     private String id;
     @DatabaseField(columnName = "BROKER")
     protected String broker;

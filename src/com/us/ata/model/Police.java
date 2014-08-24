@@ -12,7 +12,7 @@ public class Police
 {
     public transient static final String TABLE_NAME = "POLICE";
 
-    @DatabaseField(columnName = "_ID", id = true, generatedId = true)
+    @DatabaseField(columnName = "_ID", id = true)
     private String id;
     @DatabaseField(columnName = "EMAIL")
     protected String email;

@@ -31,6 +31,7 @@
                     android:layout_marginRight="@dimen/_5dp"
                     android:layout_marginTop="@dimen/_5dp">
         <ImageButton android:layout_width="wrap_content"
+                     android:visibility="gone"
                      android:layout_height="wrap_content"
                      android:background="@drawable/left_arrow_mem_detail"
                      android:layout_alignParentLeft="true"
@@ -45,6 +46,7 @@
                 android:id="@+id/view_vehicle_detail_btSelect"/>
 
         <ImageButton android:layout_width="wrap_content"
+                     android:visibility="gone"
                      android:layout_height="wrap_content"
                      android:background="@drawable/right_arrow_mem_detail"
                      android:layout_alignParentRight="true"
