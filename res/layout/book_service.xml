@@ -81,41 +81,92 @@
                     android:hint="Witness Email Id"
                     android:layout_marginTop="@dimen/_5dp"/>
             <EditText
-                    android:id="@+id/book_service_edtWitnessAddress"
+                    android:id="@+id/book_service_edtRego"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     style="@style/text_while"
                     android:textSize="@dimen/_20dp"
                     android:background="@drawable/edt_background"
-                    android:hint="Witness Address"
+                    android:hint="REGO#"
                     android:layout_marginTop="@dimen/_5dp"/>
             <EditText
-                    android:id="@+id/book_service_edtWitnessAddress"
+                    android:id="@+id/book_service_edtMake"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     style="@style/text_while"
                     android:textSize="@dimen/_20dp"
                     android:background="@drawable/edt_background"
-                    android:hint="Witness Address"
+                    android:hint="MAKE"
                     android:layout_marginTop="@dimen/_5dp"/>
             <EditText
-                    android:id="@+id/book_service_edtWitnessAddress"
+                    android:id="@+id/book_service_edtModel"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     style="@style/text_while"
                     android:textSize="@dimen/_20dp"
                     android:background="@drawable/edt_background"
-                    android:hint="Witness Address"
+                    android:hint="MODEL"
                     android:layout_marginTop="@dimen/_5dp"/>
             <EditText
-                    android:id="@+id/book_service_edtWitnessAddress"
+                    android:id="@+id/book_service_edtYourPhone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     style="@style/text_while"
                     android:textSize="@dimen/_20dp"
                     android:background="@drawable/edt_background"
-                    android:hint="Witness Address"
+                    android:hint="YOUR PHONE"
                     android:layout_marginTop="@dimen/_5dp"/>
+            <EditText
+                    android:id="@+id/book_service_edtYourAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/text_while"
+                    android:textSize="@dimen/_20dp"
+                    android:background="@drawable/edt_background"
+                    android:hint="YOUR ADDRESS"
+                    android:layout_marginTop="@dimen/_5dp"/>
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edt_background"
+                    android:layout_marginTop="@dimen/_5dp"
+                    >
+                <EditText
+                        android:id="@+id/book_service_edtRegoDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/text_while"
+                        android:textSize="@dimen/_20dp"
+                        android:hint="REGO DATE"
+                        />
+                <ImageView
+                        android:id="@+id/book_service_ivRegoDateRight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/right_arrow_mem_detail_2x"
+                        android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edt_background"
+                    android:layout_marginTop="@dimen/_5dp"
+                    >
+                <EditText
+                        android:id="@+id/book_service_edtOtherWork"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/text_while"
+                        android:textSize="@dimen/_20dp"
+                        android:hint="REGO DATE"
+                        />
+                <ImageView
+                        android:id="@+id/book_service_ivOtherWork"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/right_arrow_mem_detail_2x"
+                        android:layout_alignParentRight="true"/>
+            </RelativeLayout>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
