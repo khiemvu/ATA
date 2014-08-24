@@ -11,6 +11,7 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.us.ata.R;
+import com.us.ata.utils.LocationService;
 
 /**
  * User: Khiemvx
@@ -46,8 +47,14 @@ public class MapLocationActivity extends Activity implements View.OnClickListene
     private void initilizeMap()
     {
         // latitude and longitude
-        double latitude = 17.385044;
-        double longitude = 78.486671;
+        double latitude = 0;
+        double longitude = 0;
+        LocationService.updateLocation(this);
+        if (null != LocationService.getLastKnownLocation())
+        {
+            longitude = LocationService.getLastKnownLocation().getLongitude();
+            latitude = LocationService.getLastKnownLocation().getLatitude();
+        }
         // create marker
         MarkerOptions marker = new MarkerOptions().position(new LatLng(latitude, longitude)).title("My Position");
         // Changing marker icon
