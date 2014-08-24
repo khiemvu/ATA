@@ -8,6 +8,7 @@ import com.j256.ormlite.dao.BaseDaoImpl;
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.support.ConnectionSource;
 import com.j256.ormlite.table.TableUtils;
+import com.us.ata.model.Image;
 import com.us.ata.model.Police;
 import com.us.ata.model.Vehicle;
 import com.us.ata.model.Witness;
@@ -25,6 +26,7 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper
     private Dao<Vehicle, String> vehicleDAO;
     private Dao<Witness, String> witnessDAO;
     private Dao<Police, String> policeDAO;
+    private Dao<Image,Long> imageDAO;
 
 // --------------------------- CONSTRUCTORS ---------------------------
 
@@ -66,6 +68,16 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper
         return policeDAO;
     }
 
+    public Dao<Image,Long> getImageDAO() throws SQLException
+    {
+        if (imageDAO == null)
+        {
+            imageDAO = getDao(Image.class);
+            ((BaseDaoImpl) imageDAO).initialize();
+        }
+        return imageDAO;
+    }
+
 // -------------------------- OTHER METHODS --------------------------
 
     @Override
@@ -76,6 +88,7 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper
             TableUtils.createTable(connectionSource, Vehicle.class);
             TableUtils.createTable(connectionSource, Witness.class);
             TableUtils.createTable(connectionSource, Police.class);
+            TableUtils.createTable(connectionSource, Image.class);
         }
         catch (SQLException e)
         {
@@ -92,9 +105,11 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper
             TableUtils.dropTable(connectionSource, Witness.class, true);
             TableUtils.dropTable(connectionSource, Vehicle.class, true);
             TableUtils.dropTable(connectionSource, Police.class, true);
+            TableUtils.dropTable(connectionSource, Image.class, true);
             TableUtils.createTable(connectionSource, Vehicle.class);
             TableUtils.createTable(connectionSource, Witness.class);
             TableUtils.createTable(connectionSource, Police.class);
+            TableUtils.createTable(connectionSource, Image.class);
 
         }
         catch (SQLException e)
@@ -107,6 +122,7 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper
         TableUtils.dropTable(connectionSource, Vehicle.class, true);
         TableUtils.dropTable(connectionSource, Witness.class, true);
         TableUtils.dropTable(connectionSource, Police.class, true);
+        TableUtils.dropTable(connectionSource, Image.class, true);
 
     }
 
@@ -115,5 +131,6 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper
         TableUtils.createTable(connectionSource, Vehicle.class);
         TableUtils.createTable(connectionSource, Witness.class);
         TableUtils.createTable(connectionSource, Police.class);
+        TableUtils.createTable(connectionSource, Image.class);
     }
 }

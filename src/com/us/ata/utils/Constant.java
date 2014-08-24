@@ -7,4 +7,5 @@ package com.us.ata.utils;
 public class Constant
 {
     public static final String BLANK = "";
+    public static  final int REQUEST_CODE_CAMERA = 666;
 }

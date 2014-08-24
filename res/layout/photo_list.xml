@@ -27,7 +27,7 @@
                 />
     </RelativeLayout>
     <GridView
-            android:id="@+id/dis_upload_image_grvImage"
+            android:id="@+id/photo_list_grvImage"
             style="@style/text_while"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
