@@ -10,11 +10,15 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import com.us.ata.R;
+import com.us.ata.model.Vehicle;
 import com.us.ata.utils.DateTimePickerDialog;
 import com.us.ata.utils.DateTimePickerHelper;
+import com.us.ata.utils.Utils;
 
+import java.sql.SQLException;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.UUID;
 
 /**
  * User: Khiemvx
@@ -64,10 +68,20 @@ public class AddVehicleActivity extends Activity implements View.OnClickListener
         switch (view.getId())
         {
             case R.id.add_vehicle_etRegoDate:
+                calendar = Calendar.getInstance();
                 showReminderPicker();
                 break;
             case R.id.add_vehicle_btSave:
-                //todo perform action save
+                Vehicle vehicle = getVehicle();
+                try
+                {
+                    Utils.getHelper(this).getVehicleDAO().createIfNotExists(vehicle);
+                }
+                catch (SQLException e)
+                {
+                    Log.e("all_in_one", e.getMessage());
+                }
+                finish();
                 break;
             case R.id.add_vehicle_btBack:
                 finish();
@@ -75,11 +89,28 @@ public class AddVehicleActivity extends Activity implements View.OnClickListener
         }
     }
 
+    private Vehicle getVehicle()
+    {
+        Vehicle vehicle = new Vehicle();
+        vehicle.setName(etName.getText().toString());
+        vehicle.setRego(etRego.getText().toString());
+        vehicle.setMake(etMake.getText().toString());
+        vehicle.setModel(etModel.getText().toString());
+        vehicle.setYourPhone(etPhone.getText().toString());
+        vehicle.setYourAddress(etAddress.getText().toString());
+        vehicle.setRegoReminder(etRegoDate.getText().toString());
+        vehicle.setInsuranceCompany(etInsuranceComany.getText().toString());
+        vehicle.setInsurancePhone(etInsurancePhone.getText().toString());
+        vehicle.setInsurancePolicy(etPolicy.getText().toString());
+        vehicle.setBroker(etBroker.getText().toString());
+        vehicle.setId(UUID.randomUUID().toString());
+        return vehicle;
+    }
+
     private void showReminderPicker()
     {
         DateTimePickerDialog dtpDialog = new DateTimePickerDialog(
                 AddVehicleActivity.this);
-        calendar = Calendar.getInstance();
         dtpDialog.setDateTime(calendar);
         dtpDialog.setButton(AlertDialog.BUTTON_POSITIVE, "Save", dialog_onclick);
         dtpDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "Cancel", dialog_onclick);
@@ -120,7 +151,7 @@ public class AddVehicleActivity extends Activity implements View.OnClickListener
             }
             catch (Exception ex)
             {
-                Log.e("MainActivity", ex.getMessage());
+                Log.e("all_in_one", ex.getMessage());
             }
         }
     };

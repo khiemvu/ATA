@@ -128,7 +128,7 @@ public class DateTimePickerDialog extends AlertDialog implements
     public void setDateTime(Calendar cal)
     {
         this._c.setTime(cal.getTime());
-//        dpReminder.setMinDate(_c.getTimeInMillis());
+        dpReminder.setMinDate(_c.getTimeInMillis());
         dpReminder.init(_c.get(Calendar.YEAR), _c.get(Calendar.MONTH),
                 _c.get(Calendar.DAY_OF_MONTH), DateTimePickerDialog.this);
         tpReminder.setCurrentHour(_c.get(Calendar.HOUR_OF_DAY) + 1);
@@ -136,7 +136,7 @@ public class DateTimePickerDialog extends AlertDialog implements
         tpReminder.setIs24HourView(false);
 
         tpReminder.setOnTimeChangedListener(DateTimePickerDialog.this);
-
+//
 //        String title = DateTimePickerHelper.dateToString(_c.getTime(),
 //                DateTimePickerHelper.NORMAL_DAY_OF_WEEK_FORMAT)
 //                + ", "

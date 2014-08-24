@@ -3,9 +3,13 @@ package com.us.ata.activity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import com.us.ata.R;
+import com.us.ata.utils.Utils;
+
+import java.sql.SQLException;
 
 public class MainActivity extends Activity implements View.OnClickListener
 {
@@ -15,8 +19,16 @@ public class MainActivity extends Activity implements View.OnClickListener
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.book_service);
-//        initViewAndAction();
+        setContentView(R.layout.main);
+        initViewAndAction();
+        try
+        {
+            Utils.getHelper(this).createTables();
+        }
+        catch (SQLException e)
+        {
+            Log.e("all_in_one", e.getMessage());
+        }
     }
 
     private void initViewAndAction()
@@ -40,6 +52,10 @@ public class MainActivity extends Activity implements View.OnClickListener
             case R.id.bt_vehicleDetail:
                 Intent vehicleDetail = new Intent(this, VehicleDetailsActivity.class);
                 startActivity(vehicleDetail);
+                break;
+            case R.id.bt_ContactFTAFleet:
+                Intent contactATA = new Intent(this, ATAFleetActivity.class);
+                startActivity(contactATA);
                 break;
         }
     }

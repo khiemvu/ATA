@@ -1,8 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
-</LinearLayout>
+
+    <ImageView
+            android:layout_marginTop="@dimen/_20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/imv_logo"
+            android:layout_gravity="center"
+            android:background="@drawable/logo"
+            />
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10dp"
+            android:layout_centerInParent="true"
+            android:text="@string/address_location"
+            style="@style/text_while"
+            android:id="@+id/tvAddressLocation"
+            android:layout_below="@+id/imv_logo"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5dp"
+            android:layout_centerInParent="true"
+            android:text="@string/number_house"
+            style="@style/text_while"
+            android:id="@+id/tvNumber"
+            android:layout_below="@+id/tvAddressLocation"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10dp"
+            android:layout_centerInParent="true"
+            android:text="@string/phone_number"
+            style="@style/text_while"
+            android:id="@+id/tvFreeCall"
+            android:layout_below="@+id/tvNumber"/>
+
+    <Button
+            android:layout_width="@dimen/_300dp"
+            android:layout_marginTop="@dimen/_20dp"
+            android:layout_centerInParent="true"
+            android:layout_below="@+id/tvFreeCall"
+            android:text="@string/email_repairer"
+            android:id="@+id/ata_fleet_btEmailRepairer"
+            android:background="@drawable/back_ground_bt_blue_2x"
+            style="@style/text_while"
+            android:layout_height="@dimen/_60dp"/>
+    <RelativeLayout
+            android:layout_width="@dimen/_300dp"
+            android:layout_height="@dimen/_60dp"
+            android:layout_below="@+id/ata_fleet_btEmailRepairer"
+            android:id="@+id/ata_fleet_rlButton"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/_10dp">
+        <Button
+                android:layout_width="@dimen/_140dp"
+                android:text="@string/sms_ata"
+                android:id="@+id/ata_fleet_btSmsATA"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/background_bt_blue"
+                style="@style/text_while"
+                android:layout_height="@dimen/_40dp"></Button>
+        <Button
+                android:layout_width="@dimen/_140dp"
+                android:layout_alignParentRight="true"
+                android:text="@string/dial_now"
+                android:id="@+id/ata_fleet_btDialNow"
+                android:background="@drawable/background_bt_blue"
+                style="@style/text_while"
+                android:layout_height="@dimen/_40dp"/>
+    </RelativeLayout>
+
+    <Button
+            android:layout_width="@dimen/_300dp"
+            android:layout_below="@+id/ata_fleet_rlButton"
+            android:layout_marginTop="@dimen/_10dp"
+            android:layout_centerHorizontal="true"
+            android:text="@string/get_direction"
+            android:id="@+id/ata_fleet_btGetDirection"
+            style="@style/text_while"
+            android:background="@drawable/bt_green"
+            android:layout_height="@dimen/_60dp"/>
+</RelativeLayout>

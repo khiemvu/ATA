@@ -10,7 +10,7 @@ import com.us.ata.ormlite.DatabaseHelper;
  */
 public class Utils
 {
-    protected DatabaseHelper getHelper(Activity activity)
+    public static DatabaseHelper getHelper(Activity activity)
     {
         return (DatabaseHelper) OpenHelperManager.getHelper(activity, DatabaseHelper.class);
     }
