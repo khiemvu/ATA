@@ -34,7 +34,16 @@
         <activity android:name=".activity.AddVehicleActivity"/>
         <activity android:name=".activity.ViewVehicleDetailsActivity"/>
         <activity android:name=".activity.ATAFleetActivity"/>
-        <!--<activity android:name=".activity.MapLocation"/>-->
+        <activity android:name=".activity.MapLocationActivity"/>
+        <activity android:name=".activity.RegoReminderActivity"/>
+        <activity android:name=".activity.AccidentDetailActivity"/>
+        <activity android:name=".activity.AddWitnessActivity"/>
+        <activity android:name=".activity.VehicleAccidentsActivity"/>
+        <activity android:name=".activity.BookServiceActivity"/>
+        <activity android:name=".activity.MyWitnessActivity"/>
+        <activity android:name=".activity.ViewPhotoDetailsActivity"/>
+        <activity android:name=".activity.ViewPhotoListActivity"/>
+        <activity android:name=".activity.WitnessActivity"/>
         <!-- Goolge Maps API Key -->
         <meta-data
                 android:name="com.google.android.maps.v2.API_KEY"

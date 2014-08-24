@@ -1,9 +1,11 @@
 package com.us.ata.activity;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
 import com.us.ata.R;
+import com.us.ata.utils.Constant;
 
 /**
  * User: Khiemvx
@@ -12,6 +14,7 @@ import com.us.ata.R;
 public class ATAFleetActivity extends Activity implements View.OnClickListener
 {
     private Button btATASms, btDialNow, btEmailRepairer, btGetDirection;
+
 
     @Override
     protected void onStart()
@@ -43,11 +46,53 @@ public class ATAFleetActivity extends Activity implements View.OnClickListener
             case R.id.ata_fleet_btDialNow:
                 break;
             case R.id.ata_fleet_btEmailRepairer:
+                callAppForSentEmail();
                 break;
             case R.id.ata_fleet_btSmsATA:
                 break;
             case R.id.ata_fleet_btGetDirection:
+                Intent getDirection = new Intent(this, MapLocationActivity.class);
+                startActivity(getDirection);
                 break;
         }
     }
+
+    public void callAppForSentEmail()
+    {
+        String subject = "ATT App Accident...";
+        String message =
+                "Accident Date: %s\n"
+                        + "Accident Time: %s\n\n"
+
+                        + "Name: %s\n"
+                        + "Phone: %s\n"
+                        + "REGO: %s\n"
+                        + "Make: %s\n"
+                        + "Model: %s\n\n"
+
+                        + "Insurance Company: %s\n"
+                        + "Policy: %s\n"
+                        + "Insurance Phone: %s\n"
+                        + "Broker Name: %s\n";
+
+
+        message = String.format(message, Constant.BLANK,
+                Constant.BLANK,
+                Constant.BLANK,
+                Constant.BLANK,
+                Constant.BLANK,
+                Constant.BLANK,
+                Constant.BLANK,
+                Constant.BLANK,
+                Constant.BLANK,
+                Constant.BLANK,
+                Constant.BLANK);
+
+        Intent emailIntent = new Intent(Intent.ACTION_SEND);
+        emailIntent.putExtra(Intent.EXTRA_SUBJECT, subject);
+        emailIntent.putExtra(Intent.EXTRA_TEXT, message);
+        emailIntent.setType("message/rfc822");
+        startActivity(Intent.createChooser(emailIntent, "Complete action using: "));
+    }
+
 }

@@ -1,4 +1,4 @@
-package com.us.ata.activity;
+package com.us.ata.adapter;
 
 import android.content.Context;
 import android.view.View;

@@ -1,8 +1,7 @@
 package com.us.ata.activity;
 
 import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -11,13 +10,9 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import com.us.ata.R;
 import com.us.ata.model.Vehicle;
-import com.us.ata.utils.DateTimePickerDialog;
-import com.us.ata.utils.DateTimePickerHelper;
 import com.us.ata.utils.Utils;
 
 import java.sql.SQLException;
-import java.util.Calendar;
-import java.util.Date;
 import java.util.UUID;
 
 /**
@@ -26,12 +21,12 @@ import java.util.UUID;
  */
 public class AddVehicleActivity extends Activity implements View.OnClickListener
 {
+    public static final int ADD_TIME_REMINDER = 1;
     protected Button btSave;
     protected ImageView btBack;
     private EditText etName, etRego, etMake, etModel, etPhone, etAddress, etRegoDate,
             etInsuranceComany, etInsurancePhone, etPolicy, etBroker;
 
-    Calendar calendar;
 
     @Override
     public void onCreate(Bundle savedInstanceState)
@@ -68,8 +63,9 @@ public class AddVehicleActivity extends Activity implements View.OnClickListener
         switch (view.getId())
         {
             case R.id.add_vehicle_etRegoDate:
-                calendar = Calendar.getInstance();
-                showReminderPicker();
+                Intent regoReminder = new Intent(this, RegoReminderActivity.class);
+                regoReminder.putExtra("addReminder", "RegoReminderActivity");
+                startActivityForResult(regoReminder, ADD_TIME_REMINDER);
                 break;
             case R.id.add_vehicle_btSave:
                 Vehicle vehicle = getVehicle();
@@ -86,6 +82,19 @@ public class AddVehicleActivity extends Activity implements View.OnClickListener
             case R.id.add_vehicle_btBack:
                 finish();
                 break;
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data)
+    {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == RESULT_OK)
+        {
+            if (requestCode == ADD_TIME_REMINDER)
+            {
+                etRegoDate.setText(data.getStringExtra("timeReminderResult"));
+            }
         }
     }
 
@@ -107,52 +116,5 @@ public class AddVehicleActivity extends Activity implements View.OnClickListener
         return vehicle;
     }
 
-    private void showReminderPicker()
-    {
-        DateTimePickerDialog dtpDialog = new DateTimePickerDialog(
-                AddVehicleActivity.this);
-        dtpDialog.setDateTime(calendar);
-        dtpDialog.setButton(AlertDialog.BUTTON_POSITIVE, "Save", dialog_onclick);
-        dtpDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "Cancel", dialog_onclick);
-        dtpDialog.show();
-    }
 
-    DialogInterface.OnClickListener dialog_onclick = new DialogInterface.OnClickListener()
-    {
-
-        @Override
-        public void onClick(DialogInterface dialog, int which)
-        {
-            try
-            {
-                if (dialog.getClass() != DateTimePickerDialog.class)
-                {
-                    return;
-                }
-                switch (which)
-                {
-                    case DialogInterface.BUTTON_POSITIVE:
-                        DateTimePickerDialog reminderDl = (DateTimePickerDialog) dialog;
-
-                        Date date = reminderDl.getDate();
-                        if (date.compareTo(calendar.getTime()) > 0)
-                        {
-                            etRegoDate.setText(DateTimePickerHelper.dateToString(date,
-                                    DateTimePickerHelper.NORMAL_FORMAT));
-                            etRegoDate.setTag(date.getTime());
-                        }
-                        break;
-                    case DialogInterface.BUTTON_NEGATIVE:
-                        dialog.dismiss();
-                        break;
-                    default:
-                        break;
-                }
-            }
-            catch (Exception ex)
-            {
-                Log.e("all_in_one", ex.getMessage());
-            }
-        }
-    };
 }
