@@ -42,8 +42,8 @@ public class ViewVehicleDetailsActivity extends Activity implements View.OnClick
         if (sizeOfList > 0)
         {
             ibtNext.setVisibility(View.VISIBLE);
+            bindDataOnView(0);
         }
-        bindDataOnView(0);
     }
 
     private void bindDataOnView(int position)

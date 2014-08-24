@@ -19,7 +19,8 @@
     <string name="ataFleetTow">ATA FLeet Tow</string>
     <string name="needHelpNow">Need Help Now ?</string>
     <string name="bookServices">Book Services</string>
-    <string name="enter_your_details">Enter your details before driving vehicle</string>
+    <string name="enter_your_details_before">Enter your details before</string>
+    <string name="enter_your_details_driving">driving vehicle</string>
     <string name="add_vehicle">Add Vehicles</string>
     <string name="my_vehicle">My Vehicle</string>
     <string name="name">NAME</string>
