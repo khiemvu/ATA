@@ -8,13 +8,14 @@
             android:layout_height="wrap_content"
             android:background="@drawable/back_ground_bt_blue_2x"
             >
-        <ImageView
+        <Button
                 android:id="@+id/photo_list_btBack"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bt_back_2x"
                 android:layout_alignParentLeft="true"
                 android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_2dp"
                 />
         <TextView
                 android:layout_width="wrap_content"
@@ -25,4 +26,16 @@
                 android:textSize="@dimen/_20dp"
                 />
     </RelativeLayout>
+    <GridView
+            android:id="@+id/dis_upload_image_grvImage"
+            style="@style/text_while"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:columnWidth="@dimen/_100dp"
+            android:horizontalSpacing="@dimen/_1dp"
+            android:numColumns="auto_fit"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="@dimen/_1dp" >
+        >
+    </GridView>
 </LinearLayout>

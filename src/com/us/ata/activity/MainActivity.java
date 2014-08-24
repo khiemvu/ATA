@@ -57,6 +57,10 @@ public class MainActivity extends Activity implements View.OnClickListener
                 Intent contactATA = new Intent(this, ATAFleetActivity.class);
                 startActivity(contactATA);
                 break;
+            case R.id.bt_vehicleAccident:
+                Intent vehicleAccident = new Intent(this,VehicleAccidentsActivity.class);
+                startActivity(vehicleAccident);
+                break;
         }
     }
 }

@@ -8,7 +8,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/back_ground_bt_blue_2x"
             >
-        <ImageView
+        <Button
                 android:id="@+id/book_service_btBack"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -46,12 +46,13 @@
                         style="@style/text_while"
                         android:textSize="@dimen/_20dp"
                         android:minHeight="@dimen/_40dp"/>
-                <ImageView
-                        android:id="@+id/book_service_ivRightClick"
+                <Button
+                        android:id="@+id/book_service_btRightSend"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/right_arrow_mem_detail_2x"
-                        android:layout_alignParentRight="true"/>
+                        android:background="@drawable/right_arrow_mem_detail"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"/>
             </RelativeLayout>
             <EditText
                     android:id="@+id/book_service_edtKilometer"
@@ -72,7 +73,7 @@
                     android:layout_marginTop="@dimen/_5dp"/>
 
             <EditText
-                    android:id="@+id/book_service_edtWitnessEmailId"
+                    android:id="@+id/book_service_edtUnKnow"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     style="@style/text_while"
@@ -139,12 +140,13 @@
                         android:textSize="@dimen/_20dp"
                         android:hint="REGO DATE"
                         />
-                <ImageView
-                        android:id="@+id/book_service_ivRegoDateRight"
+                <Button
+                        android:id="@+id/book_service_btRegoDateRight"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/right_arrow_mem_detail_2x"
-                        android:layout_alignParentRight="true"/>
+                        android:background="@drawable/right_arrow_mem_detail"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"/>
             </RelativeLayout>
             <RelativeLayout
                     android:layout_width="match_parent"
@@ -160,12 +162,13 @@
                         android:textSize="@dimen/_20dp"
                         android:hint="REGO DATE"
                         />
-                <ImageView
-                        android:id="@+id/book_service_ivOtherWork"
+                <Button
+                        android:id="@+id/book_service_btOtherWork"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/right_arrow_mem_detail_2x"
-                        android:layout_alignParentRight="true"/>
+                        android:background="@drawable/right_arrow_mem_detail"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"/>
             </RelativeLayout>
         </LinearLayout>
     </ScrollView>

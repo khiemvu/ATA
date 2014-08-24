@@ -8,8 +8,8 @@
             android:layout_height="wrap_content"
             android:background="@drawable/back_ground_bt_blue_2x"
             >
-        <ImageView
-                android:id="@+id/witness_btBack"
+        <Button
+                android:id="@+id/my_witness_btBack"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bt_back_2x"
@@ -25,4 +25,8 @@
                 android:textSize="@dimen/_20dp"
                 />
     </RelativeLayout>
+    <ListView
+            android:id="@+id/my_list_lvWitness"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
 </LinearLayout>

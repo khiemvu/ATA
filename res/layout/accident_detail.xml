@@ -8,13 +8,14 @@
             android:layout_height="wrap_content"
             android:background="@drawable/back_ground_bt_blue_2x"
             >
-        <ImageView
+        <Button
                 android:id="@+id/accident_detail_btBack"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bt_back_2x"
                 android:layout_alignParentLeft="true"
                 android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_2dp"
                 />
         <TextView
                 android:layout_width="wrap_content"
@@ -66,9 +67,10 @@
                         android:id="@+id/accident_detail_ivMyVehicleDetail"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/bt_right_arrow"
+                        android:background="@drawable/right_arrow_mem_detail"
                         android:layout_alignParentRight="true"
-                        android:layout_centerVertical="true"/>
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/_10dp"/>
             </RelativeLayout>
             <RelativeLayout
                     android:layout_width="match_parent"
@@ -89,9 +91,10 @@
                         android:id="@+id/accident_detail_ivAddOtherVehicleDetails"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/bt_right_arrow"
+                        android:background="@drawable/right_arrow_mem_detail"
                         android:layout_alignParentRight="true"
-                        android:layout_centerVertical="true"/>
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/_10dp"/>
             </RelativeLayout>
             <RelativeLayout
                     android:layout_width="match_parent"
@@ -112,9 +115,10 @@
                         android:id="@+id/accident_detail_ivWitness"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/bt_right_arrow"
+                        android:background="@drawable/right_arrow_mem_detail"
                         android:layout_alignParentRight="true"
-                        android:layout_centerVertical="true"/>
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/_10dp"/>
             </RelativeLayout>
             <RelativeLayout
                     android:layout_width="match_parent"
@@ -135,9 +139,10 @@
                         android:id="@+id/accident_detail_ivPolice"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/bt_right_arrow"
+                        android:background="@drawable/right_arrow_mem_detail"
                         android:layout_alignParentRight="true"
-                        android:layout_centerVertical="true"/>
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/_10dp"/>
             </RelativeLayout>
             <RelativeLayout
                     android:layout_width="match_parent"
@@ -180,7 +185,9 @@
                     android:gravity="center"
                     android:text="Email My Repair"
                     style="@style/text_while"
-                    android:textSize="@dimen/_20dp"/>
+                    android:textSize="@dimen/_20dp"
+                    android:layout_marginBottom="@dimen/_30dp"
+                    android:layout_marginTop="@dimen/_10dp"/>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

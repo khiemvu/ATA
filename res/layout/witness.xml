@@ -8,7 +8,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/back_ground_bt_blue_2x"
             >
-        <ImageView
+        <Button
                 android:id="@+id/witness_btBack"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

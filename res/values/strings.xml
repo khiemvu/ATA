@@ -52,4 +52,8 @@
     <string name="dial_now">Dial Now</string>
     <string name="get_direction">Get Direction</string>
 
+    <string name="involved_accident">Involved in Accident ?</string>
+    <string name="call_for_tow">Call for Tow</string>
+    <string name="call_to">Call 000</string>
+
 </resources>

@@ -10,4 +10,6 @@
     <color name="Gray">#666666</color>
     <color name="Green">#079a04</color>
     <color name="Yellow">#DAA520</color>
+    <color name="grid_state_pressed">#1Affffff</color>
+    <color name="grid_state_focused">#80000000</color>
 </resources>

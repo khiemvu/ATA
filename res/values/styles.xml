@@ -13,6 +13,12 @@
         <item name="android:textSize">@dimen/_20dp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/White</item>
+        <item name="android:paddingLeft">@dimen/_5dp</item>
+    </style>
+
+    <style name="PhotoGridLayout">
+        <item name="android:drawSelectorOnTop">true</item>
+        <item name="android:listSelector">@drawable/photogrid_list_selector</item>
     </style>
 
 </resources>
