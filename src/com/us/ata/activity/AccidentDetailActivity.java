@@ -4,10 +4,8 @@ import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
 import android.provider.MediaStore;
 import android.text.format.Time;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -17,12 +15,8 @@ import com.us.ata.model.Image;
 import com.us.ata.ormlite.DatabaseHelper;
 import com.us.ata.utils.Constant;
 import com.us.ata.utils.Utils;
-import org.w3c.dom.Text;
 
-import java.io.File;
 import java.sql.SQLException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 /**
  * Created by Jodie Pham on 8/24/14.
@@ -40,22 +34,23 @@ public class AccidentDetailActivity extends Activity implements View.OnClickList
     private TextView tvDate;
     private TextView tvTime;
     private DatabaseHelper databaseHelper;
+
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.accident_detail);
 
         databaseHelper = new DatabaseHelper(this);
-        btBack = (Button)findViewById(R.id.accident_detail_btBack);
-        btViewDetail = (ImageView)findViewById(R.id.accident_detail_ivMyVehicleDetail);
-        btAddOtherVehicle = (ImageView)findViewById(R.id.accident_detail_ivAddOtherVehicleDetails);
-        btWitness = (ImageView)findViewById(R.id.accident_detail_ivWitness);
-        btPolice = (ImageView)findViewById(R.id.accident_detail_ivPolice);
-        btView = (Button)findViewById(R.id.accident_detail_btView);
-        btPhoto = (Button)findViewById(R.id.accident_detail_btPhoto);
-        btEmailRepair = (Button)findViewById(R.id.accident_detail_btSendEmailMyRepair);
-        tvDate = (TextView)findViewById(R.id.accident_detail_tvDate);
-        tvTime = (TextView)findViewById(R.id.accident_detail_tvTime);
+        btBack = (Button) findViewById(R.id.accident_detail_btBack);
+        btViewDetail = (ImageView) findViewById(R.id.accident_detail_ivMyVehicleDetail);
+        btAddOtherVehicle = (ImageView) findViewById(R.id.accident_detail_ivAddOtherVehicleDetails);
+        btWitness = (ImageView) findViewById(R.id.accident_detail_ivWitness);
+        btPolice = (ImageView) findViewById(R.id.accident_detail_ivPolice);
+        btView = (Button) findViewById(R.id.accident_detail_btView);
+        btPhoto = (Button) findViewById(R.id.accident_detail_btPhoto);
+        btEmailRepair = (Button) findViewById(R.id.accident_detail_btSendEmailMyRepair);
+        tvDate = (TextView) findViewById(R.id.accident_detail_tvDate);
+        tvTime = (TextView) findViewById(R.id.accident_detail_tvTime);
 
         btBack.setOnClickListener(this);
         btViewDetail.setOnClickListener(this);
@@ -68,7 +63,7 @@ public class AccidentDetailActivity extends Activity implements View.OnClickList
 
         Time today = new Time(Time.getCurrentTimezone());
         today.setToNow();
-        tvDate.setText(today.monthDay + "-" + today.month +"-" + today.year);             // Day of the month (1-31)
+        tvDate.setText(today.monthDay + "-" + today.month + "-" + today.year);             // Day of the month (1-31)
         tvTime.setText(today.format("%k:%M:%S"));
 
     }
@@ -82,8 +77,12 @@ public class AccidentDetailActivity extends Activity implements View.OnClickList
                 finish();
                 break;
             case R.id.accident_detail_ivMyVehicleDetail:
+                Intent viewVehicleDetail = new Intent(this, ViewVehicleDetailsActivity.class);
+                startActivity(viewVehicleDetail);
                 break;
             case R.id.accident_detail_ivAddOtherVehicleDetails:
+                Intent addOtherVehicle = new Intent(this, AddOtherVehicleActivity.class);
+                startActivity(addOtherVehicle);
                 break;
             case R.id.accident_detail_ivWitness:
                 Intent witness = new Intent(this, WitnessActivity.class);
