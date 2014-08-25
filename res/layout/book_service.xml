@@ -139,6 +139,7 @@
                         style="@style/text_while"
                         android:textSize="@dimen/_20dp"
                         android:hint="REGO DATE"
+                        android:background="@null"
                         />
                 <Button
                         android:id="@+id/book_service_btRegoDateRight"
@@ -161,6 +162,7 @@
                         style="@style/text_while"
                         android:textSize="@dimen/_20dp"
                         android:hint="REGO DATE"
+                        android:background="@null"
                         />
                 <Button
                         android:id="@+id/book_service_btOtherWork"

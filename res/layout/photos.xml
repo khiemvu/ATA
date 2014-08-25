@@ -8,7 +8,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/back_ground_bt_blue_2x"
             >
-        <ImageView
+        <Button
                 android:id="@+id/photo_btBack"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -24,5 +24,13 @@
                 style="@style/text_while"
                 android:textSize="@dimen/_20dp"
                 />
+    </RelativeLayout>
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
     </RelativeLayout>
 </LinearLayout>

@@ -24,7 +24,7 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper
 
     private Context context;
     private Dao<Vehicle, String> vehicleDAO;
-    private Dao<Witness, String> witnessDAO;
+    private Dao<Witness, Long> witnessDAO;
     private Dao<Police, String> policeDAO;
     private Dao<Image,Long> imageDAO;
 
@@ -48,7 +48,7 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper
         return vehicleDAO;
     }
 
-    public Dao<Witness, String> getWitnessDAO() throws SQLException
+    public Dao<Witness, Long> getWitnessDAO() throws SQLException
     {
         if (witnessDAO == null)
         {
