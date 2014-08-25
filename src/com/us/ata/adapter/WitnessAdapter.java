@@ -1,9 +1,12 @@
 package com.us.ata.adapter;
 
 import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.TextView;
+import com.us.ata.R;
 import com.us.ata.model.Witness;
 
 import java.util.ArrayList;
@@ -23,27 +26,50 @@ public class WitnessAdapter extends BaseAdapter
         this.witnessList = witnessList;
     }
 
+
     @Override
     public int getCount()
     {
-        return 0;
+        return witnessList.size();
     }
 
     @Override
     public Object getItem(int position)
     {
-        return null;
+        return witnessList.get(position);
     }
 
     @Override
     public long getItemId(int position)
     {
-        return 0;
+        return position;
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent)
     {
-        return null;
+        ViewHolder viewHolder = null;
+        if (convertView == null)
+        {
+            viewHolder = new ViewHolder();
+            LayoutInflater li = (LayoutInflater) context
+                    .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            convertView = li.inflate(R.layout.witness_item, null);
+            viewHolder.tvName = (TextView) convertView.findViewById(R.id.witness_item_tvName);
+            convertView.setTag(viewHolder);
+        }
+        else
+
+        {
+            viewHolder = (ViewHolder) convertView.getTag();
+        }
+        viewHolder.tvName.setText(witnessList.get(position).getName());
+        return convertView;
+    }
+
+    class ViewHolder
+    {
+        public TextView tvName;
+
     }
 }

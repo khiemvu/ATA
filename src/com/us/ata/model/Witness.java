@@ -3,17 +3,19 @@ package com.us.ata.model;
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 
+import java.io.Serializable;
+
 /**
  * User: khiemvx
  * Date: 8/23/14
  */
 @DatabaseTable(tableName = "WITNESS")
-public class Witness
+public class Witness implements Serializable
 {
     public transient static final String TABLE_NAME = "WITNESS";
 
-    @DatabaseField(columnName = "_ID", id = true)
-    private String id;
+    @DatabaseField(columnName = "_ID", generatedId = true)
+    private Long id;
     @DatabaseField(columnName = "CRASH_LOCATION")
     protected String crashLocation;
     @DatabaseField(columnName = "DESCRIPTION")
@@ -33,12 +35,12 @@ public class Witness
         this.phone = phone;
     }
 
-    public String getId()
+    public Long getId()
     {
         return id;
     }
 
-    public void setId(String id)
+    public void setId(Long id)
     {
         this.id = id;
     }
