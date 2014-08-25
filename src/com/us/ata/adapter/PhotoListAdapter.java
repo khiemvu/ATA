@@ -97,7 +97,7 @@ public class PhotoListAdapter extends BaseAdapter
         }
 
         imageLoader.init(ImageLoaderConfiguration.createDefault(context));
-        imageLoader.displayImage(images.get(position).getUrl(), holder.imageview, options);
+//        imageLoader.displayImage(images.get(position).getUrl(), holder.imageview, options);
         imageLoader.displayImage(images.get(position).getUrl(), holder.imageview, options, new ImageLoadingListener()
                 {
                     @Override

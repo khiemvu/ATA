@@ -1,8 +1,11 @@
 package com.us.ata.activity;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Adapter;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.GridView;
 import com.us.ata.R;
@@ -17,7 +20,7 @@ import java.util.List;
 /**
  * Created by Jodie Pham on 8/24/14.
  */
-public class ViewPhotoListActivity extends Activity implements View.OnClickListener
+public class ViewPhotoListActivity extends Activity implements View.OnClickListener ,AdapterView.OnItemClickListener
 {
     private Button btBack;
     private DatabaseHelper databaseHelper;
@@ -44,6 +47,7 @@ public class ViewPhotoListActivity extends Activity implements View.OnClickListe
         gridView = (GridView)findViewById(R.id.photo_list_grvImage);
         gridView.setAdapter(adapter);
         btBack.setOnClickListener(this);
+        gridView.setOnItemClickListener(this);
     }
 
     @Override
@@ -55,5 +59,13 @@ public class ViewPhotoListActivity extends Activity implements View.OnClickListe
                 finish();
                 break;
         }
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id)
+    {
+        Intent intent = new Intent(this,ViewPhotoDetailsActivity.class);
+        intent.putExtra("url",((Image)adapter.getItem(position)).getUrl());
+        startActivity(intent);
     }
 }
