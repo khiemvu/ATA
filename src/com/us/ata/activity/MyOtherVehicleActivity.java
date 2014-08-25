@@ -4,7 +4,10 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.*;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import com.us.ata.R;
 import com.us.ata.model.Vehicle;
 import com.us.ata.utils.Utils;
@@ -16,14 +19,13 @@ import java.util.List;
  * User: Khiemvx
  * Date: 8/22/14
  */
-public class ViewVehicleDetailsActivity extends Activity implements View.OnClickListener
+public class MyOtherVehicleActivity extends Activity implements View.OnClickListener
 {
-    private Button btSelect, btSave, btDelete;
+    private Button btSave, btDelete;
     private ImageButton ibtPrevious, ibtNext;
     private ImageView btBack;
     private EditText etName, etRego, etMake, etModel, etPhone, etAddress,
             etInsuranceComany, etInsurancePhone, etPolicy, etBroker;
-    private TextView etRegoDate;
 
     List<Vehicle> vehicleList;
     int sizeOfList;
@@ -33,7 +35,7 @@ public class ViewVehicleDetailsActivity extends Activity implements View.OnClick
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.view_vehicle_detail);
+        setContentView(R.layout.my_other_vehicle);
         getAllDataFromDB();
         initViewAndAction();
         sizeOfList = vehicleList.size();
@@ -41,6 +43,10 @@ public class ViewVehicleDetailsActivity extends Activity implements View.OnClick
         {
             ibtNext.setVisibility(View.VISIBLE);
             bindDataOnView(0);
+        }
+        else
+        {
+            findViewById(R.id.scroll_view).setVisibility(View.GONE);
         }
     }
 
@@ -53,7 +59,6 @@ public class ViewVehicleDetailsActivity extends Activity implements View.OnClick
         etModel.setText(temp.getModel());
         etPhone.setText(temp.getYourPhone());
         etAddress.setText(temp.getYourAddress());
-        etRegoDate.setText(temp.getRegoReminder());
         etInsuranceComany.setText(temp.getInsuranceCompany());
         etPolicy.setText(temp.getInsurancePolicy());
         etInsurancePhone.setText(temp.getInsurancePhone());
@@ -78,7 +83,7 @@ public class ViewVehicleDetailsActivity extends Activity implements View.OnClick
 
         switch (view.getId())
         {
-            case R.id.view_vehicle_detail_ibtNext:
+            case R.id.my_other_vehicle_ibtNext:
                 if (sizeOfList > 1 && count < sizeOfList - 1)
                 {
                     ibtPrevious.setVisibility(View.VISIBLE);
@@ -90,7 +95,7 @@ public class ViewVehicleDetailsActivity extends Activity implements View.OnClick
                     }
                 }
                 break;
-            case R.id.view_vehicle_detail_ibtPrevious:
+            case R.id.my_other_vehicle_ibtPrevious:
                 if (count > 0)
                 {
                     bindDataOnView(count - 1);
@@ -101,7 +106,7 @@ public class ViewVehicleDetailsActivity extends Activity implements View.OnClick
                     }
                 }
                 break;
-            case R.id.view_vehicle_detail_btBack:
+            case R.id.my_other_vehicle_btBack:
                 finish();
                 break;
         }
@@ -110,29 +115,26 @@ public class ViewVehicleDetailsActivity extends Activity implements View.OnClick
 
     private void initViewAndAction()
     {
-        etName = (EditText) findViewById(R.id.view_vehicl_detail__etName);
-        etRego = (EditText) findViewById(R.id.view_vehicle_detail_etRego);
-        etMake = (EditText) findViewById(R.id.view_vehicle_detail_etMake);
-        etModel = (EditText) findViewById(R.id.view_vehicle_detail_etModel);
-        etPhone = (EditText) findViewById(R.id.view_vehicle_detail_etPhone);
-        etInsuranceComany = (EditText) findViewById(R.id.view_vehicle_detail_etInsuranceCompany);
-        etAddress = (EditText) findViewById(R.id.view_vehicle_detail_etAddress);
-        etRegoDate = (TextView) findViewById(R.id.view_vehicle_detail_etRegoDate);
-        etInsurancePhone = (EditText) findViewById(R.id.view_vehicle_detail_etInsurancePhone);
-        etPolicy = (EditText) findViewById(R.id.view_vehicle_detail_etPolicy);
-        etBroker = (EditText) findViewById(R.id.view_vehicle_detail_etBroker);
+        etName = (EditText) findViewById(R.id.my_other_vehicle_etName);
+        etRego = (EditText) findViewById(R.id.my_other_vehicle_etRego);
+        etMake = (EditText) findViewById(R.id.my_other_vehicle_etMake);
+        etModel = (EditText) findViewById(R.id.my_other_vehicle_etModel);
+        etPhone = (EditText) findViewById(R.id.my_other_vehicle_etPhone);
+        etInsuranceComany = (EditText) findViewById(R.id.my_other_vehicle_etInsuranceCompany);
+        etAddress = (EditText) findViewById(R.id.my_other_vehicle_etAddress);
+        etInsurancePhone = (EditText) findViewById(R.id.my_other_vehicle_etInsurancePhone);
+        etPolicy = (EditText) findViewById(R.id.my_other_vehicle_etPolicy);
+        etBroker = (EditText) findViewById(R.id.my_other_vehicle_etBroker);
 
-        btBack = (ImageView) findViewById(R.id.view_vehicle_detail_btBack);
-        btDelete = (Button) findViewById(R.id.view_vehicle_detail_btDelete);
-        btSave = (Button) findViewById(R.id.view_vehicle_detail_btSave);
-        btSelect = (Button) findViewById(R.id.view_vehicle_detail_btSelect);
-        ibtPrevious = (ImageButton) findViewById(R.id.view_vehicle_detail_ibtPrevious);
-        ibtNext = (ImageButton) findViewById(R.id.view_vehicle_detail_ibtNext);
+        btBack = (ImageView) findViewById(R.id.my_other_vehicle_btBack);
+        btDelete = (Button) findViewById(R.id.my_other_vehicle_btDelete);
+        btSave = (Button) findViewById(R.id.my_other_vehicle_btSave);
+        ibtPrevious = (ImageButton) findViewById(R.id.my_other_vehicle_ibtPrevious);
+        ibtNext = (ImageButton) findViewById(R.id.my_other_vehicle_ibtNext);
 
         btBack.setOnClickListener(this);
         btSave.setOnClickListener(this);
         btDelete.setOnClickListener(this);
-        btSelect.setOnClickListener(this);
         ibtPrevious.setOnClickListener(this);
         ibtNext.setOnClickListener(this);
     }

@@ -2,6 +2,7 @@
 <resources>
     <string name="app_name">ATAProject</string>
     <string name="titleVehicleDetail">My Vehicle Detail</string>
+    <string name="my_other_vehicle">My Other Vehicle</string>
     <string name="vehicleDetail">Vehicle Detail</string>
     <string name="vehicleAccident">Vehicle Accident</string>
     <string name="vehicleServicing">Vehicle Servicing</string>
@@ -56,5 +57,8 @@
     <string name="involved_accident">Involved in Accident ?</string>
     <string name="call_for_tow">Call for Tow</string>
     <string name="call_to">Call 000</string>
+    <string name="add_other_vehicle">Add Other Vehicle</string>
+    <string name="other_vehicle">Other Vehicle</string>
+
 
 </resources>
