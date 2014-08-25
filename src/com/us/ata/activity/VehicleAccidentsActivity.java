@@ -47,8 +47,12 @@ public class VehicleAccidentsActivity extends Activity implements View.OnClickLi
                 startActivity(vehicleDetail);
                 break;
             case R.id.vehicle_accident_btCallForTow:
+                Intent callForTow = new Intent(this, ATAFleetTowActivity.class);
+                startActivity(callForTow);
                 break;
             case R.id.vehicle_accident_btCall000:
+                Intent needHelpNow = new Intent(this, NeedHelpNowActivity.class);
+                startActivity(needHelpNow);
                 break;
         }
     }

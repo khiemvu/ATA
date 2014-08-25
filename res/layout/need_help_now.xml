@@ -34,7 +34,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 style="@style/text_while"
-                android:textSize="@dimen/_40dp"
                 android:text="Is anyone hurt?"
                 android:layout_centerInParent="true"/>
     </RelativeLayout>
@@ -44,15 +43,14 @@
             android:gravity="center"
             android:layout_weight="1"
             android:orientation="vertical"
-            android:layout_margin="@dimen/_5dp">
-        <Button
+            android:layout_marginBottom="@dimen/_140dp">
+    <Button
                 android:id="@+id/need_help_now_btYes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bt_red"
                 android:text="Yes? Dial 000"
                 style="@style/text_while"
-                android:textSize="@dimen/_20dp"
                 android:minHeight="@dimen/_40dp"
               />
         <Button
@@ -62,7 +60,6 @@
                 android:background="@drawable/bt_green_small"
                 android:text="No, Continue Next"
                 style="@style/text_while"
-                android:textSize="@dimen/_20dp"
                 android:minHeight="@dimen/_40dp"
                 android:layout_marginTop="@dimen/_10dp"/>
     </LinearLayout>

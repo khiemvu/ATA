@@ -39,7 +39,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     style="@style/text_while"
-                    android:textSize="@dimen/_30dp"
                     android:text="@string/involved_accident"
                     android:layout_centerInParent="true"
                     />

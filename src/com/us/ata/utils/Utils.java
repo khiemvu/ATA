@@ -1,6 +1,7 @@
 package com.us.ata.utils;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.*;
 import android.net.Uri;
 import android.os.Environment;
@@ -71,6 +72,7 @@ public class Utils
         }
         return mediaFile;
     }
+
     public static Bitmap scaleCenterCrop(Bitmap source, int newHeight, int newWidth)
     {
         int sourceWidth = source.getWidth();
@@ -109,7 +111,8 @@ public class Utils
         return null;
     }
 
-    public static Bitmap getRoundedCornerBitmap(Bitmap bitmap, int pixels) {
+    public static Bitmap getRoundedCornerBitmap(Bitmap bitmap, int pixels)
+    {
         Bitmap output = Bitmap.createBitmap(bitmap.getWidth(), bitmap
                 .getHeight(), Bitmap.Config.ARGB_8888);
         Canvas canvas = new Canvas(output);
@@ -129,5 +132,15 @@ public class Utils
         canvas.drawBitmap(bitmap, rect, rect, paint);
 
         return output;
+    }
+
+    public static void performDial(String numberString, Activity activity)
+    {
+        if (!numberString.equals(""))
+        {
+            Uri number = Uri.parse("tel:" + numberString);
+            Intent dial = new Intent(Intent.ACTION_CALL, number);
+            activity.startActivity(dial);
+        }
     }
 }

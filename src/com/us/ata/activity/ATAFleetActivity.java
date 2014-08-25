@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.Toast;
 import com.us.ata.R;
 import com.us.ata.utils.Constant;
+import com.us.ata.utils.Utils;
 
 /**
  * User: Khiemvx
@@ -47,7 +48,7 @@ public class ATAFleetActivity extends Activity implements View.OnClickListener
         switch (view.getId())
         {
             case R.id.ata_fleet_btDialNow:
-                performDial("1800633990");
+                Utils.performDial("1800633990", this);
                 break;
             case R.id.ata_fleet_btEmailRepairer:
                 callAppForSentEmail();
@@ -85,15 +86,6 @@ public class ATAFleetActivity extends Activity implements View.OnClickListener
         }
     }
 
-    private void performDial(String numberString)
-    {
-        if (!numberString.equals(""))
-        {
-            Uri number = Uri.parse("tel:" + numberString);
-            Intent dial = new Intent(Intent.ACTION_CALL, number);
-            startActivity(dial);
-        }
-    }
 
     public void callAppForSentEmail()
     {

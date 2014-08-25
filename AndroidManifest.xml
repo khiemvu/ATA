@@ -45,6 +45,8 @@
         <activity android:name=".activity.ViewPhotoDetailsActivity"/>
         <activity android:name=".activity.ViewPhotoListActivity"/>
         <activity android:name=".activity.WitnessActivity"/>
+        <activity android:name=".activity.NeedHelpNowActivity"/>
+        <activity android:name=".activity.ATAFleetTowActivity"/>
         <!-- Goolge Maps API Key -->
         <meta-data
                 android:name="com.google.android.maps.v2.API_KEY"
