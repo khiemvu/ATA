@@ -4,10 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageButton;
-import android.widget.ImageView;
+import android.widget.*;
 import com.us.ata.R;
 import com.us.ata.model.Vehicle;
 import com.us.ata.utils.Utils;
@@ -24,8 +21,9 @@ public class ViewVehicleDetailsActivity extends Activity implements View.OnClick
     private Button btSelect, btSave, btDelete;
     private ImageButton ibtPrevious, ibtNext;
     private ImageView btBack;
-    private EditText etName, etRego, etMake, etModel, etPhone, etAddress, etRegoDate,
+    private EditText etName, etRego, etMake, etModel, etPhone, etAddress,
             etInsuranceComany, etInsurancePhone, etPolicy, etBroker;
+    private TextView etRegoDate;
 
     List<Vehicle> vehicleList;
     int sizeOfList;
@@ -115,8 +113,8 @@ public class ViewVehicleDetailsActivity extends Activity implements View.OnClick
         etPhone = (EditText) findViewById(R.id.view_vehicle_detail_etPhone);
         etInsuranceComany = (EditText) findViewById(R.id.view_vehicle_detail_etInsuranceCompany);
         etAddress = (EditText) findViewById(R.id.view_vehicle_detail_etAddress);
-        etRegoDate = (EditText) findViewById(R.id.view_vehicle_detail_etRegoDate);
-        etInsurancePhone = (EditText) findViewById(R.id.view_vehicle_detail_etRegoDate);
+        etRegoDate = (TextView) findViewById(R.id.view_vehicle_detail_etRegoDate);
+        etInsurancePhone = (EditText) findViewById(R.id.view_vehicle_detail_etInsurancePhone);
         etPolicy = (EditText) findViewById(R.id.view_vehicle_detail_etPolicy);
         etBroker = (EditText) findViewById(R.id.view_vehicle_detail_etBroker);
 

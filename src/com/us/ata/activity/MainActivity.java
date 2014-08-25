@@ -61,6 +61,10 @@ public class MainActivity extends Activity implements View.OnClickListener
                 Intent vehicleAccident = new Intent(this,VehicleAccidentsActivity.class);
                 startActivity(vehicleAccident);
                 break;
+            case R.id.bt_vehicleServicing:
+                Intent vehicleServicing = new Intent(this, BookServiceActivity.class);
+                startActivity(vehicleServicing);
+                break;
         }
     }
 }

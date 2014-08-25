@@ -2,8 +2,11 @@ package com.us.ata.activity;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 import com.us.ata.R;
 import com.us.ata.utils.Constant;
 
@@ -44,16 +47,51 @@ public class ATAFleetActivity extends Activity implements View.OnClickListener
         switch (view.getId())
         {
             case R.id.ata_fleet_btDialNow:
+                performDial("1800633990");
                 break;
             case R.id.ata_fleet_btEmailRepairer:
                 callAppForSentEmail();
                 break;
             case R.id.ata_fleet_btSmsATA:
+                sendSMS();
                 break;
             case R.id.ata_fleet_btGetDirection:
                 Intent getDirection = new Intent(this, MapLocationActivity.class);
                 startActivity(getDirection);
                 break;
+        }
+    }
+
+    protected void sendSMS()
+    {
+        Log.i("Send SMS", "");
+
+        Intent smsIntent = new Intent(Intent.ACTION_VIEW);
+        smsIntent.setData(Uri.parse("smsto:"));
+        smsIntent.setType("vnd.android-dir/mms-sms");
+
+        smsIntent.putExtra("address", new String("0425308069"));
+        smsIntent.putExtra("sms_body", "Hi...");
+        try
+        {
+            startActivity(smsIntent);
+            finish();
+            Log.i("Finished sending SMS...", "");
+        }
+        catch (android.content.ActivityNotFoundException ex)
+        {
+            Toast.makeText(getApplicationContext(),
+                    "SMS faild, please try again later.", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private void performDial(String numberString)
+    {
+        if (!numberString.equals(""))
+        {
+            Uri number = Uri.parse("tel:" + numberString);
+            Intent dial = new Intent(Intent.ACTION_CALL, number);
+            startActivity(dial);
         }
     }
 

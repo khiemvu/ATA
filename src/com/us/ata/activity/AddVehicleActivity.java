@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import com.us.ata.R;
 import com.us.ata.model.Vehicle;
 import com.us.ata.utils.Utils;
@@ -24,8 +25,9 @@ public class AddVehicleActivity extends Activity implements View.OnClickListener
     public static final int ADD_TIME_REMINDER = 1;
     protected Button btSave;
     protected ImageView btBack;
-    private EditText etName, etRego, etMake, etModel, etPhone, etAddress, etRegoDate,
+    private EditText etName, etRego, etMake, etModel, etPhone, etAddress,
             etInsuranceComany, etInsurancePhone, etPolicy, etBroker;
+    private TextView etRegoDate;
 
 
     @Override
@@ -46,7 +48,7 @@ public class AddVehicleActivity extends Activity implements View.OnClickListener
         etModel = (EditText) findViewById(R.id.add_vehicle_etModel);
         etPhone = (EditText) findViewById(R.id.add_vehicle_etPhone);
         etAddress = (EditText) findViewById(R.id.add_vehicle_etAddress);
-        etRegoDate = (EditText) findViewById(R.id.add_vehicle_etRegoDate);
+        etRegoDate = (TextView) findViewById(R.id.add_vehicle_etRegoDate);
         etInsuranceComany = (EditText) findViewById(R.id.add_vehicle_etInsuranceCompany);
         etInsurancePhone = (EditText) findViewById(R.id.add_vehicle_etInsurancePhone);
         etPolicy = (EditText) findViewById(R.id.add_vehicle_etPolicy);
