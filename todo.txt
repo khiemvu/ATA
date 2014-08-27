@@ -1,0 +1,4 @@
+1.My other vehicle: chi show entity vehicle co rego date blank(other vehicle addd)
+2. Cho phep edit, delete luon o man hih view vehicle
+3. My Witness cho phep edit, xoa luon 1 witness.
+4.Book service get data from vehicle

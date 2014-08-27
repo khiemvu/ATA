@@ -89,6 +89,8 @@ public class AccidentDetailActivity extends Activity implements View.OnClickList
                 startActivity(witness);
                 break;
             case R.id.accident_detail_ivPolice:
+                Intent police = new Intent(this, WitnessActivity.class);
+                startActivity(police);
                 break;
             case R.id.accident_detail_btView:
                 Intent viewPhotoList = new Intent(this, ViewPhotoListActivity.class);

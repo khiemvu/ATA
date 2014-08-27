@@ -36,6 +36,13 @@
             <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+                <Button android:layout_width="@dimen/_40dp"
+                        android:visibility="gone"
+                        android:layout_height="@dimen/_40dp"
+                        android:background="@drawable/left_arrow_mem_detail_2x"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:id="@+id/view_vehicle_detail_ibtPrevious"/>
                 <Button
                         android:id="@+id/book_service_btSend"
                         android:layout_width="wrap_content"
@@ -48,9 +55,11 @@
                         android:minHeight="@dimen/_40dp"/>
                 <Button
                         android:id="@+id/book_service_btRightSend"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/right_arrow_mem_detail"
+                        android:layout_width="@dimen/_40dp"
+                        android:visibility="gone"
+                        android:layout_height="@dimen/_40dp"
+                        android:maxHeight="@dimen/_40dp"
+                        android:background="@drawable/right_arrow_mem_detail_2x"
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"/>
             </RelativeLayout>
@@ -60,6 +69,7 @@
                     android:layout_height="wrap_content"
                     style="@style/text_while"
                     android:textSize="@dimen/_20dp"
+                    android:hint="SERVICE TYPE"
                     android:background="@drawable/edt_background"
                     android:layout_marginTop="@dimen/_5dp"/>
             <EditText
@@ -69,7 +79,7 @@
                     style="@style/text_while"
                     android:textSize="@dimen/_20dp"
                     android:background="@drawable/edt_background"
-                    android:hint="Book Date"
+                    android:hint="BOOKING DATE"
                     android:layout_marginTop="@dimen/_5dp"/>
 
             <EditText
@@ -161,7 +171,7 @@
                         android:layout_height="wrap_content"
                         style="@style/text_while"
                         android:textSize="@dimen/_20dp"
-                        android:hint="REGO DATE"
+                        android:hint="OTHER WORK"
                         android:background="@null"
                         />
                 <Button

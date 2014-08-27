@@ -59,6 +59,8 @@
     <string name="call_to">Call 000</string>
     <string name="add_other_vehicle">Add Other Vehicle</string>
     <string name="other_vehicle">Other Vehicle</string>
+    <string name="enter_note_about_your_vehicle">ENTER NOTE ABOUT YOUR VEHICLE</string>
+    <string name="other_work">Other Work</string>
 
 
 </resources>

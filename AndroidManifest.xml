@@ -50,6 +50,7 @@
         <activity android:name=".activity.AddOtherVehicleActivity"/>
         <activity android:name=".activity.AddOtherVehicleDetailActivity"/>
         <activity android:name=".activity.MyOtherVehicleActivity"/>
+        <activity android:name=".activity.OtherWorkActivity"/>
         <!-- Goolge Maps API Key -->
         <meta-data
                 android:name="com.google.android.maps.v2.API_KEY"

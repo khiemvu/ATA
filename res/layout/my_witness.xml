@@ -33,14 +33,16 @@
             android:layout_marginRight="@dimen/_3dp">
         <Button
                 android:id="@+id/my_witness_btPrevious"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/_40dp"
+                android:visibility="gone"
+                android:layout_height="@dimen/_40dp"
                 android:layout_alignParentLeft="true"
                 android:background="@drawable/left_arrow_mem_detail_2x"/>
         <Button
                 android:id="@+id/my_witness_btNext"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/_40dp"
+                android:visibility="gone"
+                android:layout_height="@dimen/_40dp"
                 android:layout_alignParentRight="true"
                 android:background="@drawable/right_arrow_mem_detail_2x"/>
     </RelativeLayout>

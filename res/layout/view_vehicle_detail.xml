@@ -30,25 +30,26 @@
                     android:layout_marginLeft="@dimen/_5dp"
                     android:layout_marginRight="@dimen/_5dp"
                     android:layout_marginTop="@dimen/_5dp">
-        <ImageButton android:layout_width="wrap_content"
+        <ImageButton android:layout_width="@dimen/_40dp"
                      android:visibility="gone"
-                     android:layout_height="wrap_content"
-                     android:background="@drawable/left_arrow_mem_detail"
+                     android:layout_height="@dimen/_40dp"
+                     android:background="@drawable/left_arrow_mem_detail_2x"
                      android:layout_alignParentLeft="true"
                      android:layout_centerVertical="true"
                      android:id="@+id/view_vehicle_detail_ibtPrevious"/>
         <Button android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:minHeight="@dimen/_40dp"
                 android:background="@drawable/background_bt_blue"
                 android:text="@string/select"
                 style="@style/text_while"
                 android:layout_centerInParent="true"
                 android:id="@+id/view_vehicle_detail_btSelect"/>
 
-        <ImageButton android:layout_width="wrap_content"
+        <ImageButton android:layout_width="@dimen/_40dp"
                      android:visibility="gone"
-                     android:layout_height="wrap_content"
-                     android:background="@drawable/right_arrow_mem_detail"
+                     android:layout_height="@dimen/_40dp"
+                     android:background="@drawable/right_arrow_mem_detail_2x"
                      android:layout_alignParentRight="true"
                      android:layout_centerVertical="true"
                      android:id="@+id/view_vehicle_detail_ibtNext"/>
@@ -67,6 +68,7 @@
             <EditText
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
+                    android:minHeight="@dimen/_40dp"
                     android:hint="@string/name"
                     android:id="@+id/view_vehicl_detail__etName"
                     android:background="@drawable/bg_edit_text"
@@ -76,6 +78,7 @@
             <EditText
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
+                    android:minHeight="@dimen/_40dp"
                     android:layout_marginTop="@dimen/_7dp"
                     android:hint="@string/rego"
                     android:id="@+id/view_vehicle_detail_etRego"
@@ -86,6 +89,7 @@
             <EditText
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
+                    android:minHeight="@dimen/_40dp"
                     android:layout_marginTop="@dimen/_7dp"
                     android:hint="@string/make"
                     android:id="@+id/view_vehicle_detail_etMake"
@@ -96,6 +100,7 @@
             <EditText
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
+                    android:minHeight="@dimen/_40dp"
                     android:layout_marginTop="@dimen/_7dp"
                     android:hint="@string/model"
                     android:id="@+id/view_vehicle_detail_etModel"
@@ -106,6 +111,7 @@
             <EditText
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
+                    android:minHeight="@dimen/_40dp"
                     android:layout_marginTop="@dimen/_7dp"
                     android:hint="@string/phone"
                     android:id="@+id/view_vehicle_detail_etPhone"
@@ -116,6 +122,7 @@
             <EditText
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
+                    android:minHeight="@dimen/_40dp"
                     android:layout_marginTop="@dimen/_7dp"
                     android:hint="@string/address"
                     android:id="@+id/view_vehicle_detail_etAddress"
@@ -126,6 +133,7 @@
             <TextView
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
+                    android:minHeight="@dimen/_40dp"
                     android:layout_marginTop="@dimen/_7dp"
                     android:hint="@string/rego_date"
                     android:id="@+id/view_vehicle_detail_etRegoDate"
@@ -138,7 +146,8 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_20dp"
-                    android:layout_marginBottom="@dimen/_20dp"
+                    android:minHeight="@dimen/_40dp"
+                    android:layout_marginBottom="@dimen/_5dp"
                     android:hint="@string/insurance_detail"
                     android:id="@+id/view_vehicle_detail_tvInsuranceDetail"
                     style="@style/text_while"
@@ -147,7 +156,8 @@
             <EditText
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_7dp"
+                    android:layout_marginTop="@dimen/_2dp"
+                    android:minHeight="@dimen/_40dp"
                     android:hint="@string/insurance_company"
                     android:id="@+id/view_vehicle_detail_etInsuranceCompany"
                     android:background="@drawable/bg_edit_text"
@@ -157,6 +167,7 @@
             <EditText
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
+                    android:minHeight="@dimen/_40dp"
                     android:layout_marginTop="@dimen/_7dp"
                     android:hint="@string/policy"
                     android:id="@+id/view_vehicle_detail_etPolicy"
@@ -167,6 +178,7 @@
             <EditText
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
+                    android:minHeight="@dimen/_40dp"
                     android:layout_marginTop="@dimen/_7dp"
                     android:hint="@string/insurance_phone"
                     android:id="@+id/view_vehicle_detail_etInsurancePhone"
@@ -177,6 +189,7 @@
             <EditText
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
+                    android:minHeight="@dimen/_40dp"
                     android:layout_marginTop="@dimen/_7dp"
                     android:hint="@string/broker"
                     android:id="@+id/view_vehicle_detail_etBroker"
@@ -196,6 +209,7 @@
                         android:layout_centerInParent="true"
                         android:layout_width="wrap_content"
                         android:text="@string/save"
+                        android:minHeight="@dimen/_40dp"
                         android:layout_alignParentLeft="true"
                         android:id="@+id/view_vehicle_detail_btSave"
                         android:background="@drawable/background_bt_blue"
@@ -204,6 +218,7 @@
                 <Button
                         android:layout_centerInParent="true"
                         android:layout_width="wrap_content"
+                        android:minHeight="@dimen/_40dp"
                         android:layout_alignParentRight="true"
                         android:text="@string/delete"
                         android:id="@+id/view_vehicle_detail_btDelete"

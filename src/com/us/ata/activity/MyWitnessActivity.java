@@ -1,13 +1,10 @@
 package com.us.ata.activity;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ListView;
 import com.us.ata.R;
 import com.us.ata.adapter.WitnessAdapter;
 import com.us.ata.model.Witness;
@@ -35,7 +32,8 @@ public class MyWitnessActivity extends Activity implements View.OnClickListener
     private EditText edtDescription;
     private EditText edtLocation;
     List<Witness> witnesses = new ArrayList<Witness>();
-    private int i = 0;
+    int sizeOfList;
+    int count = 0;
 
     public void onCreate(Bundle savedInstanceState)
     {
@@ -50,6 +48,26 @@ public class MyWitnessActivity extends Activity implements View.OnClickListener
         {
             e.printStackTrace();
         }
+        initViewAndAction();
+        sizeOfList = witnesses.size();
+        if (witnesses != null && witnesses.size() > 0)
+        {
+            btNext.setVisibility(View.VISIBLE);
+            bindDataOnView(0);
+
+        }
+    }
+
+    private void bindDataOnView(int position)
+    {
+        edtName.setText(witnesses.get(position).getName());
+        edtPhone.setText(witnesses.get(position).getPhone());
+        edtDescription.setText(witnesses.get(position).getDescription());
+        edtLocation.setText(witnesses.get(position).getCrashLocation());
+    }
+
+    private void initViewAndAction()
+    {
         adapter = new WitnessAdapter(this, witnesses);
         btBack = (Button) findViewById(R.id.my_witness_btBack);
         btPrevious = (Button) findViewById(R.id.my_witness_btPrevious);
@@ -61,30 +79,6 @@ public class MyWitnessActivity extends Activity implements View.OnClickListener
         edtPhone = (EditText) findViewById(R.id.my_witness_edtPhone);
         edtDescription = (EditText) findViewById(R.id.my_witness_edtDescription);
         edtLocation = (EditText) findViewById(R.id.my_witness_edtLocation);
-
-        if (witnesses != null && witnesses.size() > 0)
-        {
-            edtName.setText(witnesses.get(0).getName());
-            edtPhone.setText(witnesses.get(0).getPhone());
-            edtDescription.setText(witnesses.get(0).getDescription());
-            edtLocation.setText(witnesses.get(0).getCrashLocation());
-        }
-
-        if (witnesses.size() == 1)
-        {
-            btNext.setVisibility(View.GONE);
-            btPrevious.setVisibility(View.GONE);
-        }
-        else if (witnesses.size() == 0)
-        {
-            btNext.setVisibility(View.GONE);
-            btPrevious.setVisibility(View.GONE);
-        }
-        else
-        {
-            btNext.setVisibility(View.VISIBLE);
-            btPrevious.setVisibility(View.VISIBLE);
-        }
 
         btBack.setOnClickListener(this);
         btPrevious.setOnClickListener(this);
@@ -102,61 +96,33 @@ public class MyWitnessActivity extends Activity implements View.OnClickListener
                 finish();
                 break;
             case R.id.my_witness_btPrevious:
-                if (i != 0)
-                {
-                    i--;
-                }
-                edtName.setText(witnesses.get(i).getName());
-                edtPhone.setText(witnesses.get(i).getPhone());
-                edtDescription.setText(witnesses.get(i).getDescription());
-                edtLocation.setText(witnesses.get(i).getCrashLocation());
-                if (i >= witnesses.size() - 1)
-                {
-                    btNext.setVisibility(View.GONE);
-                }
-                else
+                if (count > 0)
                 {
                     btNext.setVisibility(View.VISIBLE);
-                }
-                if (i < 1)
-                {
-                    btPrevious.setVisibility(View.GONE);
-                }
-                else
-                {
-                    btPrevious.setVisibility(View.VISIBLE);
+                    bindDataOnView(count - 1);
+                    count--;
+                    if (count == 0)
+                    {
+                        btPrevious.setVisibility(View.GONE);
+                    }
                 }
                 break;
             case R.id.my_witness_btNext:
-                if (i < witnesses.size() - 1)
-                {
-                    i++;
-                }
-                edtName.setText(witnesses.get(i).getName());
-                edtPhone.setText(witnesses.get(i).getPhone());
-                edtDescription.setText(witnesses.get(i).getDescription());
-                edtLocation.setText(witnesses.get(i).getCrashLocation());
-                if (i >= witnesses.size() - 1)
-                {
-                    btNext.setVisibility(View.GONE);
-                }
-                else
-                {
-                    btNext.setVisibility(View.VISIBLE);
-                }
-                if (i < 1)
-                {
-                    btPrevious.setVisibility(View.GONE);
-                }
-                else
+                if (sizeOfList > 1 && count < sizeOfList - 1)
                 {
                     btPrevious.setVisibility(View.VISIBLE);
+                    bindDataOnView(count + 1);
+                    count++;
+                    if (count == sizeOfList - 1)
+                    {
+                        btNext.setVisibility(View.GONE);
+                    }
                 }
                 break;
             case R.id.my_witness_btDelete:
                 try
                 {
-                    databaseHelper.getWitnessDAO().delete(witnesses.get(i));
+                    databaseHelper.getWitnessDAO().delete(witnesses.get(count));
                     finish();
                 }
                 catch (SQLException e)
@@ -168,7 +134,7 @@ public class MyWitnessActivity extends Activity implements View.OnClickListener
                 try
                 {
                     Witness witness = new Witness();
-                    witness.setId(witnesses.get(i).getId());
+                    witness.setId(witnesses.get(count).getId());
                     witness.setName(edtName.getText().toString());
                     witness.setDescription(edtDescription.getText().toString());
                     witness.setPhone(edtPhone.getText().toString());

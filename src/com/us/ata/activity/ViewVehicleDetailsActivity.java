@@ -93,6 +93,7 @@ public class ViewVehicleDetailsActivity extends Activity implements View.OnClick
             case R.id.view_vehicle_detail_ibtPrevious:
                 if (count > 0)
                 {
+                    ibtNext.setVisibility(View.VISIBLE);
                     bindDataOnView(count - 1);
                     count--;
                     if (count == 0)

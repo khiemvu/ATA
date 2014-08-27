@@ -77,7 +77,7 @@ public class AddWitnessActivity extends Activity implements View.OnClickListener
                 {
                     e.printStackTrace();
                 }
-                Intent intent = new Intent(this, MyWitnessActivity.class);
+                Intent intent = new Intent(this, WitnessActivity.class);
                 startActivity(intent);
                 finish();
                 break;

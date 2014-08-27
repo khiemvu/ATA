@@ -35,7 +35,7 @@ public class AddOtherVehicleActivity extends Activity implements View.OnClickLis
     {
         switch (v.getId())
         {
-            case R.id.witness_btBack:
+            case R.id.add_other_vehicle_btBack:
                 finish();
                 break;
             case R.id.add_other_vehicle_btAddOther:
