@@ -109,6 +109,40 @@ public class MyOtherVehicleActivity extends Activity implements View.OnClickList
             case R.id.my_other_vehicle_btBack:
                 finish();
                 break;
+            case R.id.my_other_vehicle_btDelete:
+                try
+                {
+                    Utils.getHelper(this).getVehicleDAO().delete(vehicleList.get(count));
+                    finish();
+                }
+                catch (SQLException e)
+                {
+                    e.printStackTrace();
+                }
+                break;
+            case R.id.my_other_vehicle_btSave:
+                try
+                {
+                    Vehicle vehicle = new Vehicle();
+                    vehicle.setId(vehicleList.get(count).getId());
+                    vehicle.setName(etName.getText().toString());
+                    vehicle.setRego(etRego.getText().toString());
+                    vehicle.setMake(etMake.getText().toString());
+                    vehicle.setModel(etModel.getText().toString());
+                    vehicle.setYourPhone(etPhone.getText().toString());
+                    vehicle.setYourAddress(etAddress.getText().toString());
+                    vehicle.setInsuranceCompany(etInsuranceComany.getText().toString());
+                    vehicle.setInsurancePhone(etInsurancePhone.getText().toString());
+                    vehicle.setInsurancePolicy(etPolicy.getText().toString());
+                    vehicle.setBroker(etBroker.getText().toString());
+                    Utils.getHelper(this).getVehicleDAO().update(vehicle);
+                    finish();
+                }
+                catch (SQLException e)
+                {
+                    e.printStackTrace();
+                }
+                break;
         }
 
     }

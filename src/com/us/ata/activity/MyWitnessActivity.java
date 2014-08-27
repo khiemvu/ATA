@@ -48,6 +48,16 @@ public class MyWitnessActivity extends Activity implements View.OnClickListener
         {
             e.printStackTrace();
         }
+        if (witnesses.size() == 0)
+        {
+            findViewById(R.id.my_witness_rlContent).setVisibility(View.GONE);
+            findViewById(R.id.my_witness_llButton).setVisibility(View.GONE);
+        }
+        else
+        {
+            findViewById(R.id.my_witness_rlContent).setVisibility(View.VISIBLE);
+            findViewById(R.id.my_witness_llButton).setVisibility(View.VISIBLE);
+        }
         initViewAndAction();
         sizeOfList = witnesses.size();
         if (witnesses != null && witnesses.size() > 0)

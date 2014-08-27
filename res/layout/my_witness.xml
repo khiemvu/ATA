@@ -48,6 +48,7 @@
     </RelativeLayout>
 
     <RelativeLayout
+            android:id="@+id/my_witness_rlContent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_20dp"
@@ -125,6 +126,7 @@
         </RelativeLayout>
     </RelativeLayout>
     <LinearLayout
+            android:id="@+id/my_witness_llButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_20dp"
