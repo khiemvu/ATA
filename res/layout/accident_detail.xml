@@ -61,7 +61,7 @@
                         android:textSize="@dimen/_20dp"
                         android:layout_alignParentLeft="true"
                         android:layout_centerVertical="true"
-                        android:text="@string/vehicleDetail"
+                        android:hint="@string/vehicleDetail"
                         />
                 <ImageView
                         android:id="@+id/accident_detail_ivMyVehicleDetail"
@@ -85,7 +85,7 @@
                         android:layout_centerVertical="true"
                         style="@style/text_while"
                         android:textSize="@dimen/_20dp"
-                        android:text="@string/addOtherVehicleDetails"
+                        android:hint="@string/addOtherVehicleDetails"
                         />
                 <ImageView
                         android:id="@+id/accident_detail_ivAddOtherVehicleDetails"
@@ -109,7 +109,7 @@
                         android:layout_centerVertical="true"
                         style="@style/text_while"
                         android:textSize="@dimen/_20dp"
-                        android:text="@string/witnesses"
+                        android:hint="@string/witnesses"
                         />
                 <ImageView
                         android:id="@+id/accident_detail_ivWitness"
@@ -133,7 +133,7 @@
                         android:layout_centerVertical="true"
                         style="@style/text_while"
                         android:textSize="@dimen/_20dp"
-                        android:text="@string/police"
+                        android:hint="@string/police"
                         />
                 <ImageView
                         android:id="@+id/accident_detail_ivPolice"
@@ -174,7 +174,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Photo"/>
-                        </LinearLayout>
+                </LinearLayout>
             </RelativeLayout>
             <Button
                     android:id="@+id/accident_detail_btSendEmailMyRepair"
