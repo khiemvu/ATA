@@ -24,6 +24,10 @@ public class Witness implements Serializable
     protected String name;
     @DatabaseField(columnName = "PHONE")
     protected String phone;
+    @DatabaseField(columnName = "EMAIL")
+    protected String email;
+    @DatabaseField(columnName = "ADDRESS")
+    protected String address;
 
     public String getPhone()
     {
@@ -75,6 +79,26 @@ public class Witness implements Serializable
         this.name = name;
     }
 
+    public String getAddress()
+    {
+        return address;
+    }
+
+    public void setAddress(String address)
+    {
+        this.address = address;
+    }
+
+    public String getEmail()
+    {
+        return email;
+    }
+
+    public void setEmail(String email)
+    {
+        this.email = email;
+    }
+
     public interface Properties
     {
         public static final String Id = "_ID";
@@ -82,5 +106,7 @@ public class Witness implements Serializable
         public static final String Description = "DESCRIPTION";
         public static final String Name = "NAME";
         public static final String Phone = "PHONE";
+        public static final String Email = "EMAIL";
+        public static final String Address = "ADDRESS";
     }
 }

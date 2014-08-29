@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/activity_tractor_house_dialog_category"
+                android:padding="10dp"
+                android:layout_margin="30dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/dialog_background_black">
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dialog_rlTitle"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="10dp"
+            >
+        <TextView
+                android:id="@+id/service_type_btBack"
+                android:layout_width="60dp"
+                android:layout_height="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:text="Back"
+                style="@style/TextShowOnButton"
+                android:background="@null"
+                />
+        <TextView
+                android:id="@+id/service_type_tvTitle"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Service Type"
+                android:singleLine="true"
+                style="@style/DialogTitleStyle"
+                />
+
+    </RelativeLayout>
+
+    <LinearLayout
+            android:id="@+id/service_type_llContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/dialog_rlTitle"
+            android:background="@drawable/dialog_background_white">
+        <ListView
+                android:id="@+id/ervice_type_lvContent"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_180dp">
+
+        </ListView>
+    </LinearLayout>
+
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dialog_rlBottom"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/service_type_llContent"
+            >
+
+        <Button
+                android:id="@+id/service_type_btCancel"
+                android:layout_width="@dimen/_60dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="Cancel"
+                style="@style/TextShowOnButton"
+                android:background="@drawable/bt_green_small"
+                />
+        <Button
+                android:id="@+id/service_type_btSave"
+                android:layout_width="@dimen/_60dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="Save"
+                style="@style/TextShowOnButton"
+                android:background="@drawable/bt_green_small"
+                />
+
+    </RelativeLayout>
+</RelativeLayout>

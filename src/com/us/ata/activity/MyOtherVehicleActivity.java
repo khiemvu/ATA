@@ -41,7 +41,10 @@ public class MyOtherVehicleActivity extends Activity implements View.OnClickList
         sizeOfList = vehicleList.size();
         if (sizeOfList > 0)
         {
-            ibtNext.setVisibility(View.VISIBLE);
+            if (sizeOfList > 1)
+            {
+                ibtNext.setVisibility(View.VISIBLE);
+            }
             bindDataOnView(0);
         }
         else

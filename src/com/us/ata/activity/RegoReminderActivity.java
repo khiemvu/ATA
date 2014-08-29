@@ -25,6 +25,7 @@ public class RegoReminderActivity extends Activity implements View.OnClickListen
 {
     private Button btSave, btReminder;
     private ImageView ibtBack;
+    String addTimeReminder;
 
     Calendar calendar;
     String timeReminderResult;
@@ -37,7 +38,7 @@ public class RegoReminderActivity extends Activity implements View.OnClickListen
         initViewAndAction();
 
         Bundle extras = getIntent().getExtras();
-        String addTimeReminder = getIntent().getStringExtra("addReminder");
+        addTimeReminder = getIntent().getStringExtra("addReminder");
     }
 
     private void initViewAndAction()
@@ -124,6 +125,12 @@ public class RegoReminderActivity extends Activity implements View.OnClickListen
     private void callBack()
     {
         Intent intent = new Intent(this, AddVehicleActivity.class);
+        intent.putExtra("timeReminderResult", timeReminderResult);
+        if (!addTimeReminder.equals("RegoReminderActivity"))
+        {
+            intent.putExtra("reminderResult", "bookDateTime");
+
+        }
         intent.putExtra("timeReminderResult", timeReminderResult);
         setResult(RESULT_OK, intent);
         finish();

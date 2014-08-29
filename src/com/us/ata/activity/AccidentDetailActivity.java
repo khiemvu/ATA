@@ -8,14 +8,18 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.provider.MediaStore;
 import android.text.format.Time;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import com.us.ata.R;
 import com.us.ata.model.Image;
+import com.us.ata.model.Vehicle;
+import com.us.ata.model.Witness;
 import com.us.ata.ormlite.DatabaseHelper;
 import com.us.ata.utils.Constant;
+import com.us.ata.utils.SharedPreferencesManager;
 import com.us.ata.utils.Utils;
 
 import java.io.File;
@@ -39,6 +43,8 @@ public class AccidentDetailActivity extends Activity implements View.OnClickList
     private TextView tvDate;
     private TextView tvTime;
     private DatabaseHelper databaseHelper;
+    List<Vehicle> vehicleList;
+    List<Witness> witnessList;
     SharedPreferences prefs ;
 
     public void onCreate(Bundle savedInstanceState)
@@ -71,7 +77,7 @@ public class AccidentDetailActivity extends Activity implements View.OnClickList
         Time today = new Time(Time.getCurrentTimezone());
         today.setToNow();
         tvDate.setText(today.monthDay + "-" + today.month + "-" + today.year);             // Day of the month (1-31)
-        tvTime.setText(today.format("%k:%M:%S"));
+        tvTime.setText(today.format("%k-%M-%S"));
 
     }
 
@@ -123,14 +129,22 @@ public class AccidentDetailActivity extends Activity implements View.OnClickList
                 startActivityForResult(intent, Constant.REQUEST_CODE_CAMERA);
                 break;
             case R.id.accident_detail_btSendEmailMyRepair:
-                callAppForSentEmail();
+                try
+                {
+                    callAppForSentEmail();
+                }
+                catch (SQLException e)
+                {
+                    e.printStackTrace();
+                }
                 break;
         }
     }
 
-    public void callAppForSentEmail()
+    public void callAppForSentEmail() throws SQLException
     {
-        String subject = "ATT App Accident...";
+        String to[] = {"smash@atafleet.com"};
+        String subject = "ATA App Accident Report";
         String message =
                 "Accident Date: %s\n"
                         + "Accident Time: %s\n\n"
@@ -144,13 +158,46 @@ public class AccidentDetailActivity extends Activity implements View.OnClickList
                         + "Insurance Company: %s\n"
                         + "Policy: %s\n"
                         + "Insurance Phone: %s\n"
-                        + "Broker Name: %s\n";
+                        + "Broker Name: %s\n\n";
 
+        String otherVehicle =
+                "Other Vehicle:\n"
+                        + "          Other vehicle%s\n"
+                        + "          Name: %s\n"
+                        + "          Phone: %s\n"
+                        + "          Reg.No: %s\n"
+                        + "          Make: %s\n"
+                        + "          Model: %s\n"
+                        + "          Insurer: %s\n"
+                        + "          Policy: %s\n"
+                        + "          Insurer: %s\n"
+                        + "          Insurance Phone: %s\n"
+                        + "          Broker Name: %s\n\n";
 
-        message = String.format(message, Constant.BLANK,
-                Constant.BLANK,
-                Constant.BLANK,
-                Constant.BLANK,
+        Vehicle vehicleSelected = null;
+        String vehicleId = new SharedPreferencesManager(this).getString(Constant.VEHICLE_ID);
+        if (vehicleId != null && !vehicleId.equals(Constant.BLANK))
+        {
+            vehicleSelected = Utils.getHelper(this).getVehicleDAO().queryForId(vehicleId);
+        }
+        if (vehicleSelected == null)
+        {
+            getAllOtherVehicleFromDB();
+            vehicleSelected = vehicleList.get(0);
+        }
+
+        message = String.format(message,
+                tvDate.getText().toString(),
+                tvTime.getText().toString(),
+                vehicleSelected.getName(),
+                vehicleSelected.getYourPhone(),
+                vehicleSelected.getRego(),
+                vehicleSelected.getMake(),
+                vehicleSelected.getModel(),
+                vehicleSelected.getInsuranceCompany(),
+                vehicleSelected.getInsurancePolicy(),
+                vehicleSelected.getInsurancePhone(),
+                vehicleSelected.getBroker(),
                 Constant.BLANK,
                 Constant.BLANK,
                 Constant.BLANK,
@@ -160,8 +207,45 @@ public class AccidentDetailActivity extends Activity implements View.OnClickList
                 Constant.BLANK);
 
         Intent emailIntent = new Intent(Intent.ACTION_SEND_MULTIPLE );
+        getAllWitnessFromDB();
+        String witness =
+                "Witness:%s\n"
+                        + "          Witness%s\n"
+                        + "          Name: %s\n"
+                        + "          Phone: %s\n"
+                        + "          Email: %s\n"
+                        + "          Location: %s\n";
+
+        String police =
+                "Witness:\n"
+                        + "          Witness%s\n"
+                        + "          Name: %s\n"
+                        + "          Phone: %s\n"
+                        + "          Email: %s\n"
+                        + "          Location: %s\n";
+        String witnessResult = "";
+        if (witnessList != null && witnessList.size() > 0)
+        {
+            int count = 0;
+            for (Witness temp : witnessList)
+            {
+                count++;
+                witness = String.format(witness,
+                        Constant.BLANK,
+                        count,
+                        temp.getName(),
+                        temp.getPhone(),
+                        temp.getEmail(),
+                        temp.getAddress());
+                witnessResult = witnessResult + witness;
+            }
+
+        }
+
+        emailIntent = new Intent(Intent.ACTION_SEND);
+        emailIntent.putExtra(Intent.EXTRA_EMAIL, to);
         emailIntent.putExtra(Intent.EXTRA_SUBJECT, subject);
-        emailIntent.putExtra(Intent.EXTRA_TEXT, message);
+        emailIntent.putExtra(Intent.EXTRA_TEXT, message + witnessResult);
         List<Image> images = new ArrayList<Image>();
         try
         {
@@ -182,9 +266,31 @@ public class AccidentDetailActivity extends Activity implements View.OnClickList
             emailIntent.setType("text/plain");
             emailIntent.putParcelableArrayListExtra(Intent.EXTRA_STREAM, uris);
         }
-
+//        emailIntent.setType("text/plain");
         startActivity(Intent.createChooser(emailIntent, "Complete action using: "));
     }
 
+    private void getAllWitnessFromDB()
+    {
+        try
+        {
+            witnessList = Utils.getHelper(this).getWitnessDAO().queryForAll();
+        }
+        catch (SQLException e)
+        {
+            Log.e("all_in_one", e.getMessage());
+        }
+    }
 
+    private void getAllOtherVehicleFromDB()
+    {
+        try
+        {
+            vehicleList = Utils.getHelper(this).getVehicleDAO().queryForAll();
+        }
+        catch (SQLException e)
+        {
+            Log.e("all_in_one", e.getMessage());
+        }
+    }
 }
