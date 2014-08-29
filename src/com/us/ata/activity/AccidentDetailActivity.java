@@ -161,60 +161,10 @@ public class AccidentDetailActivity extends Activity implements View.OnClickList
                         + "Broker Name: %s\n\n";
 
         String otherVehicle =
-                "Other Vehicle:\n"
-                        + "          Other vehicle%s\n"
-                        + "          Name: %s\n"
-                        + "          Phone: %s\n"
-                        + "          Reg.No: %s\n"
-                        + "          Make: %s\n"
-                        + "          Model: %s\n"
-                        + "          Insurer: %s\n"
-                        + "          Policy: %s\n"
-                        + "          Insurer: %s\n"
-                        + "          Insurance Phone: %s\n"
-                        + "          Broker Name: %s\n\n";
+                getOtherVehicleFormat();
 
-        Vehicle vehicleSelected = null;
-        String vehicleId = new SharedPreferencesManager(this).getString(Constant.VEHICLE_ID);
-        if (vehicleId != null && !vehicleId.equals(Constant.BLANK))
-        {
-            vehicleSelected = Utils.getHelper(this).getVehicleDAO().queryForId(vehicleId);
-        }
-        if (vehicleSelected == null)
-        {
-            getAllOtherVehicleFromDB();
-            vehicleSelected = vehicleList.get(0);
-        }
-
-        message = String.format(message,
-                tvDate.getText().toString(),
-                tvTime.getText().toString(),
-                vehicleSelected.getName(),
-                vehicleSelected.getYourPhone(),
-                vehicleSelected.getRego(),
-                vehicleSelected.getMake(),
-                vehicleSelected.getModel(),
-                vehicleSelected.getInsuranceCompany(),
-                vehicleSelected.getInsurancePolicy(),
-                vehicleSelected.getInsurancePhone(),
-                vehicleSelected.getBroker(),
-                Constant.BLANK,
-                Constant.BLANK,
-                Constant.BLANK,
-                Constant.BLANK,
-                Constant.BLANK,
-                Constant.BLANK,
-                Constant.BLANK);
-
-        Intent emailIntent = new Intent(Intent.ACTION_SEND_MULTIPLE );
-        getAllWitnessFromDB();
         String witness =
-                "Witness:%s\n"
-                        + "          Witness%s\n"
-                        + "          Name: %s\n"
-                        + "          Phone: %s\n"
-                        + "          Email: %s\n"
-                        + "          Location: %s\n";
+                getWitnessFormat();
 
         String police =
                 "Witness:\n"
@@ -223,6 +173,75 @@ public class AccidentDetailActivity extends Activity implements View.OnClickList
                         + "          Phone: %s\n"
                         + "          Email: %s\n"
                         + "          Location: %s\n";
+        getAllOtherVehicleFromDB();
+        Vehicle vehicleSelected = null;
+        String vehicleId = new SharedPreferencesManager(this).getString(Constant.VEHICLE_ID);
+        if (vehicleId != null && !vehicleId.equals(Constant.BLANK))
+        {
+            vehicleSelected = Utils.getHelper(this).getVehicleDAO().queryForId(vehicleId);
+        }
+        if (vehicleSelected == null && vehicleList.size() > 0)
+        {
+            vehicleSelected = vehicleList.get(0);
+        }
+
+        message = String.format(message,
+                tvDate.getText().toString(),
+                tvTime.getText().toString(),
+                vehicleSelected == null ? Constant.BLANK : vehicleSelected.getName(),
+                vehicleSelected == null ? Constant.BLANK : vehicleSelected.getYourPhone(),
+                vehicleSelected == null ? Constant.BLANK : vehicleSelected.getRego(),
+                vehicleSelected == null ? Constant.BLANK : vehicleSelected.getMake(),
+                vehicleSelected == null ? Constant.BLANK : vehicleSelected.getModel(),
+                vehicleSelected == null ? Constant.BLANK : vehicleSelected.getInsuranceCompany(),
+                vehicleSelected == null ? Constant.BLANK : vehicleSelected.getInsurancePolicy(),
+                vehicleSelected == null ? Constant.BLANK : vehicleSelected.getInsurancePhone(),
+                vehicleSelected == null ? Constant.BLANK : vehicleSelected.getBroker()
+        );
+
+        String otherVehicleResult = "";
+        if (vehicleList != null && vehicleList.size() > 0)
+        {
+            int count = 0;
+            for (Vehicle temp : vehicleList)
+            {
+                count++;
+                otherVehicle = String.format(otherVehicle,
+                        Constant.BLANK,
+                        count,
+                        temp.getName(),
+                        temp.getYourPhone(),
+                        temp.getRego(),
+                        temp.getMake(),
+                        temp.getModel(),
+                        temp.getInsuranceCompany(),
+                        temp.getInsurancePolicy(),
+                        temp.getInsurancePhone(),
+                        temp.getBroker());
+                otherVehicleResult = otherVehicleResult + otherVehicle;
+                otherVehicle =
+                        getOtherVehicleFormat();
+            }
+        }
+        else
+        {
+            otherVehicle = String.format(otherVehicle,
+                    Constant.BLANK,
+                    Constant.BLANK,
+                    Constant.BLANK,
+                    Constant.BLANK,
+                    Constant.BLANK,
+                    Constant.BLANK,
+                    Constant.BLANK,
+                    Constant.BLANK,
+                    Constant.BLANK,
+                    Constant.BLANK,
+                    Constant.BLANK);
+            otherVehicleResult = otherVehicleResult + otherVehicle;
+        }
+
+
+        getAllWitnessFromDB();
         String witnessResult = "";
         if (witnessList != null && witnessList.size() > 0)
         {
@@ -238,14 +257,27 @@ public class AccidentDetailActivity extends Activity implements View.OnClickList
                         temp.getEmail(),
                         temp.getAddress());
                 witnessResult = witnessResult + witness;
+                witness =
+                        getWitnessFormat();
             }
 
         }
-
+        else
+        {
+            witness = String.format(witness,
+                    Constant.BLANK,
+                    Constant.BLANK,
+                    Constant.BLANK,
+                    Constant.BLANK,
+                    Constant.BLANK,
+                    Constant.BLANK);
+            witnessResult = witnessResult + witness;
+        }
+        Intent emailIntent = new Intent(Intent.ACTION_SEND_MULTIPLE);
         emailIntent = new Intent(Intent.ACTION_SEND);
         emailIntent.putExtra(Intent.EXTRA_EMAIL, to);
         emailIntent.putExtra(Intent.EXTRA_SUBJECT, subject);
-        emailIntent.putExtra(Intent.EXTRA_TEXT, message + witnessResult);
+        emailIntent.putExtra(Intent.EXTRA_TEXT, message + otherVehicleResult + witnessResult);
         List<Image> images = new ArrayList<Image>();
         try
         {
@@ -263,11 +295,36 @@ public class AccidentDetailActivity extends Activity implements View.OnClickList
                 File file = new File(image.getUrl().substring(7,image.getUrl().length()));
                 uris.add(Uri.fromFile(file));
             }
-            emailIntent.setType("text/plain");
+//            emailIntent.setType("text/plain");
             emailIntent.putParcelableArrayListExtra(Intent.EXTRA_STREAM, uris);
         }
-//        emailIntent.setType("text/plain");
+        emailIntent.setType("text/plain");
         startActivity(Intent.createChooser(emailIntent, "Complete action using: "));
+    }
+
+    private String getWitnessFormat()
+    {
+        return "Witness:%s\n"
+                + "          Witness%s\n"
+                + "          Name: %s\n"
+                + "          Phone: %s\n"
+                + "          Email: %s\n"
+                + "          Location: %s\n";
+    }
+
+    private String getOtherVehicleFormat()
+    {
+        return "Other Vehicle:%s\n"
+                + "          Other vehicle%s\n"
+                + "          Name: %s\n"
+                + "          Phone: %s\n"
+                + "          Reg.No: %s\n"
+                + "          Make: %s\n"
+                + "          Model: %s\n"
+                + "          Insurer: %s\n"
+                + "          Policy: %s\n"
+                + "          Insurance Phone: %s\n"
+                + "          Broker Name: %s\n\n";
     }
 
     private void getAllWitnessFromDB()
