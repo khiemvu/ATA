@@ -2,8 +2,10 @@ package com.us.ata.activity;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.provider.MediaStore;
 import android.text.format.Time;
 import android.view.View;
@@ -16,7 +18,10 @@ import com.us.ata.ormlite.DatabaseHelper;
 import com.us.ata.utils.Constant;
 import com.us.ata.utils.Utils;
 
+import java.io.File;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Jodie Pham on 8/24/14.
@@ -34,11 +39,13 @@ public class AccidentDetailActivity extends Activity implements View.OnClickList
     private TextView tvDate;
     private TextView tvTime;
     private DatabaseHelper databaseHelper;
+    SharedPreferences prefs ;
 
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.accident_detail);
+        prefs = PreferenceManager.getDefaultSharedPreferences(this);
 
         databaseHelper = new DatabaseHelper(this);
         btBack = (Button) findViewById(R.id.accident_detail_btBack);
@@ -97,11 +104,14 @@ public class AccidentDetailActivity extends Activity implements View.OnClickList
                 startActivity(viewPhotoList);
                 break;
             case R.id.accident_detail_btPhoto:
+
+                Long section = prefs.getLong("section", 0);
                 Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");
                 Image image = new Image();
                 Uri fileUri = Utils.getOutputMediaFileUri(Utils.MEDIA_TYPE_IMAGE);
                 intent.putExtra(MediaStore.EXTRA_OUTPUT, fileUri);
                 image.setUrl(fileUri.toString());
+                image.setSection(section);
                 try
                 {
                     databaseHelper.getImageDAO().create(image);
@@ -149,10 +159,31 @@ public class AccidentDetailActivity extends Activity implements View.OnClickList
                 Constant.BLANK,
                 Constant.BLANK);
 
-        Intent emailIntent = new Intent(Intent.ACTION_SEND);
+        Intent emailIntent = new Intent(Intent.ACTION_SEND_MULTIPLE );
         emailIntent.putExtra(Intent.EXTRA_SUBJECT, subject);
         emailIntent.putExtra(Intent.EXTRA_TEXT, message);
-        emailIntent.setType("message/rfc822");
+        List<Image> images = new ArrayList<Image>();
+        Long section = prefs.getLong("section", 0);
+        try
+        {
+            images = databaseHelper.getImageDAO().queryBuilder().where().eq("SECTION",section).query();
+        }
+        catch (SQLException e)
+        {
+            e.printStackTrace();
+        }
+        ArrayList<Uri> uris = new ArrayList<Uri>();
+        if (images != null && images.size() > 0)
+        {
+            for (Image image : images)
+            {
+                File file = new File(image.getUrl().substring(7,image.getUrl().length()));
+                uris.add(Uri.fromFile(file));
+            }
+            emailIntent.setType("text/plain");
+            emailIntent.putParcelableArrayListExtra(Intent.EXTRA_STREAM, uris);
+        }
+
         startActivity(Intent.createChooser(emailIntent, "Complete action using: "));
     }
 

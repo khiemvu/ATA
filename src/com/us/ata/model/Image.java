@@ -14,6 +14,8 @@ public class Image
     private Long id;
     @DatabaseField(columnName = "URL")
     protected String url;
+    @DatabaseField(columnName = "SECTION")
+    private Long section;
 
     public String getUrl()
     {
@@ -23,5 +25,15 @@ public class Image
     public void setUrl(String url)
     {
         this.url = url;
+    }
+
+    public Long getSection()
+    {
+        return section;
+    }
+
+    public void setSection(Long section)
+    {
+        this.section = section;
     }
 }
