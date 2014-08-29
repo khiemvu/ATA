@@ -1,4 +1,74 @@
 1.My other vehicle: chi show entity vehicle co rego date blank(other vehicle addd)
-2. Cho phep edit, delete luon o man hih view vehicle
-3. My Witness cho phep edit, xoa luon 1 witness.
 4.Book service get data from vehicle
+
+ATA
+
+Accident Detail:
+ + smash@atafleet.com
+ + ATA App Accident Report
+ 1. Accident Date:     date now 29-08-2014
+    Accident Time:     time now           8:32 AM
+
+ 2. Name:    vehecle select in my vehicle
+    Phone:
+    REGO:
+    Make:
+    Model:
+
+ 3. Insurance Company:
+    Policy:
+    Insurance Phone:
+    Broker Name:
+
+ 4. Other Vehicle:
+                Other vehicle1
+                Name:
+                Phone:
+                Reg.No:
+                Make:
+                Model:
+                Insurer:
+                Policy:
+                Insurance Phone:
+                Broker Name:
+ 5. Witness:
+                Witness1
+                Name:
+                Phone:
+                Email:
+                Location:
+
+ 6. Witness:
+                 Witness1
+                 Name:
+                 Phone:
+                 Email:
+                 Location:
+
+ 7. Image attach
+----- Book Service: get information of vehicle( value default is first value in list)
+   To: atamechanical@bigpond.com
+   Subject: ATA App: Servicing Booking
+
+   Service Type:
+   Other Work:
+   Booking Date:
+   Name:
+   Rego:
+   Make:
+   Model:
+   Phone:
+   Address:
+   Rego Date:
+
+
+--- ATA Fleet
+  To: smash@atafleet.com
+  Subject: ATA App Report
+
+  Name:
+  Phone:
+  REGO:
+  Make:
+  Model:
+  (info get form list vehicle, default is first, but when select will show info of it)

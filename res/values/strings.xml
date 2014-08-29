@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">ATAProject</string>
+    <string name="app_name">ATA</string>
     <string name="titleVehicleDetail">My Vehicle Detail</string>
     <string name="my_other_vehicle">My Other Vehicle</string>
     <string name="vehicleDetail">Vehicle Detail</string>
