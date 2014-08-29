@@ -273,9 +273,7 @@ public class AccidentDetailActivity extends Activity implements View.OnClickList
                     Constant.BLANK);
             witnessResult = witnessResult + witness;
         }
-        Intent emailIntent = new Intent(Intent.ACTION_SEND_MULTIPLE);
-        emailIntent = new Intent(Intent.ACTION_SEND);
-        emailIntent.putExtra(Intent.EXTRA_EMAIL, to);
+        Intent emailIntent = new Intent(Intent.ACTION_SEND_MULTIPLE );
         emailIntent.putExtra(Intent.EXTRA_SUBJECT, subject);
         emailIntent.putExtra(Intent.EXTRA_TEXT, message + otherVehicleResult + witnessResult);
         List<Image> images = new ArrayList<Image>();
@@ -295,10 +293,9 @@ public class AccidentDetailActivity extends Activity implements View.OnClickList
                 File file = new File(image.getUrl().substring(7,image.getUrl().length()));
                 uris.add(Uri.fromFile(file));
             }
-//            emailIntent.setType("text/plain");
+            emailIntent.setType("text/plain");
             emailIntent.putParcelableArrayListExtra(Intent.EXTRA_STREAM, uris);
         }
-        emailIntent.setType("text/plain");
         startActivity(Intent.createChooser(emailIntent, "Complete action using: "));
     }
 
