@@ -163,10 +163,9 @@ public class AccidentDetailActivity extends Activity implements View.OnClickList
         emailIntent.putExtra(Intent.EXTRA_SUBJECT, subject);
         emailIntent.putExtra(Intent.EXTRA_TEXT, message);
         List<Image> images = new ArrayList<Image>();
-        Long section = prefs.getLong("section", 0);
         try
         {
-            images = databaseHelper.getImageDAO().queryBuilder().where().eq("SECTION",section).query();
+            images = databaseHelper.getImageDAO().queryForAll();
         }
         catch (SQLException e)
         {
