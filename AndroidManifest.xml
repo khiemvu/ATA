@@ -23,6 +23,7 @@
 
     <uses-sdk android:minSdkVersion="11"/>
     <application android:label="@string/app_name"
+                 android:icon="@drawable/icon_app"
                  android:theme="@style/AppTheme">
         <activity android:name=".activity.MainActivity"
                   android:label="@string/app_name">

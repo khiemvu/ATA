@@ -113,8 +113,48 @@ public class AccidentDetailActivity extends Activity implements View.OnClickList
                 startActivityForResult(intent, Constant.REQUEST_CODE_CAMERA);
                 break;
             case R.id.accident_detail_btSendEmailMyRepair:
+                callAppForSentEmail();
                 break;
         }
     }
+
+    public void callAppForSentEmail()
+    {
+        String subject = "ATT App Accident...";
+        String message =
+                "Accident Date: %s\n"
+                        + "Accident Time: %s\n\n"
+
+                        + "Name: %s\n"
+                        + "Phone: %s\n"
+                        + "REGO: %s\n"
+                        + "Make: %s\n"
+                        + "Model: %s\n\n"
+
+                        + "Insurance Company: %s\n"
+                        + "Policy: %s\n"
+                        + "Insurance Phone: %s\n"
+                        + "Broker Name: %s\n";
+
+
+        message = String.format(message, Constant.BLANK,
+                Constant.BLANK,
+                Constant.BLANK,
+                Constant.BLANK,
+                Constant.BLANK,
+                Constant.BLANK,
+                Constant.BLANK,
+                Constant.BLANK,
+                Constant.BLANK,
+                Constant.BLANK,
+                Constant.BLANK);
+
+        Intent emailIntent = new Intent(Intent.ACTION_SEND);
+        emailIntent.putExtra(Intent.EXTRA_SUBJECT, subject);
+        emailIntent.putExtra(Intent.EXTRA_TEXT, message);
+        emailIntent.setType("message/rfc822");
+        startActivity(Intent.createChooser(emailIntent, "Complete action using: "));
+    }
+
 
 }

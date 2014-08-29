@@ -89,22 +89,13 @@ public class ATAFleetActivity extends Activity implements View.OnClickListener
 
     public void callAppForSentEmail()
     {
-        String subject = "ATT App Accident...";
+        String subject = "ATT App Report...";
         String message =
-                "Accident Date: %s\n"
-                        + "Accident Time: %s\n\n"
-
-                        + "Name: %s\n"
+                         "Name: %s\n"
                         + "Phone: %s\n"
                         + "REGO: %s\n"
                         + "Make: %s\n"
-                        + "Model: %s\n\n"
-
-                        + "Insurance Company: %s\n"
-                        + "Policy: %s\n"
-                        + "Insurance Phone: %s\n"
-                        + "Broker Name: %s\n";
-
+                        + "Model: %s\n\n";
 
         message = String.format(message, Constant.BLANK,
                 Constant.BLANK,

@@ -1,6 +1,7 @@
 package com.us.ata.activity;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -11,6 +12,7 @@ import com.us.ata.utils.Utils;
 
 import java.sql.SQLException;
 import java.util.List;
+import java.util.UUID;
 
 /**
  * User: Khiemvx
@@ -18,6 +20,7 @@ import java.util.List;
  */
 public class ViewVehicleDetailsActivity extends Activity implements View.OnClickListener
 {
+    private static final int ADD_TIME_REMINDER = 1;
     private Button btSelect, btSave, btDelete;
     private ImageButton ibtPrevious, ibtNext;
     private ImageView btBack;
@@ -120,7 +123,14 @@ public class ViewVehicleDetailsActivity extends Activity implements View.OnClick
                 try
                 {
                     Vehicle vehicle = new Vehicle();
-                    vehicle.setId(vehicleList.get(count).getId());
+                    if (vehicleList != null && vehicleList.size() > 0)
+                    {
+                        vehicle.setId(vehicleList.get(count).getId());
+                    }
+                    else
+                    {
+                        vehicle.setId(UUID.randomUUID().toString());
+                    }
                     vehicle.setName(etName.getText().toString());
                     vehicle.setRego(etRego.getText().toString());
                     vehicle.setMake(etMake.getText().toString());
@@ -132,13 +142,21 @@ public class ViewVehicleDetailsActivity extends Activity implements View.OnClick
                     vehicle.setInsurancePhone(etInsurancePhone.getText().toString());
                     vehicle.setInsurancePolicy(etPolicy.getText().toString());
                     vehicle.setBroker(etBroker.getText().toString());
-                    Utils.getHelper(this).getVehicleDAO().update(vehicle);
+                    Utils.getHelper(this).getVehicleDAO().createOrUpdate(vehicle);
                     finish();
                 }
                 catch (SQLException e)
                 {
                     e.printStackTrace();
                 }
+                break;
+            case R.id.view_vehicle_detail_etRegoDate:
+                Intent regoReminder = new Intent(this, RegoReminderActivity.class);
+                regoReminder.putExtra("addReminder", "RegoReminderActivity");
+                startActivityForResult(regoReminder, ADD_TIME_REMINDER);
+                break;
+            case R.id.view_vehicle_detail_btSelect:
+                finish();
                 break;
         }
 
@@ -166,12 +184,26 @@ public class ViewVehicleDetailsActivity extends Activity implements View.OnClick
         ibtPrevious = (ImageButton) findViewById(R.id.view_vehicle_detail_ibtPrevious);
         ibtNext = (ImageButton) findViewById(R.id.view_vehicle_detail_ibtNext);
 
+        etRegoDate.setOnClickListener(this);
         btBack.setOnClickListener(this);
         btSave.setOnClickListener(this);
         btDelete.setOnClickListener(this);
         btSelect.setOnClickListener(this);
         ibtPrevious.setOnClickListener(this);
         ibtNext.setOnClickListener(this);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data)
+    {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == RESULT_OK)
+        {
+            if (requestCode == ADD_TIME_REMINDER)
+            {
+                etRegoDate.setText(data.getStringExtra("timeReminderResult"));
+            }
+        }
     }
 
 
