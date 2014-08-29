@@ -66,8 +66,8 @@ public class AddWitnessActivity extends Activity implements View.OnClickListener
             case R.id.witness_detail_btSaveDetail:
                 Witness witness = new Witness();
                 witness.setName(edtName.getText().toString());
-                witness.setCrashLocation(edtAddress.getText().toString());
-                witness.setDescription(edtEmail.getText().toString());
+                witness.setAddress(edtAddress.getText().toString());
+                witness.setEmail(edtEmail.getText().toString());
                 witness.setPhone(edtPhone.getText().toString());
                 try
                 {

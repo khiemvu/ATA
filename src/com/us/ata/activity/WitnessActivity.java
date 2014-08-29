@@ -40,10 +40,12 @@ public class WitnessActivity extends Activity implements View.OnClickListener
             case R.id.witness_btAddWitness:
                 Intent addWitness = new Intent(this,AddWitnessActivity.class);
                 startActivity(addWitness);
+                finish();
                 break;
             case R.id.witness_btMyWitness:
                 Intent myWitness = new Intent(this,MyWitnessActivity.class);
                 startActivity(myWitness);
+                finish();
                 break;
         }
 

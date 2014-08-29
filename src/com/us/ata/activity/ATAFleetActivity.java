@@ -8,8 +8,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 import com.us.ata.R;
+import com.us.ata.model.Vehicle;
 import com.us.ata.utils.Constant;
 import com.us.ata.utils.Utils;
+
+import java.sql.SQLException;
+import java.util.List;
 
 /**
  * User: Khiemvx
@@ -18,7 +22,7 @@ import com.us.ata.utils.Utils;
 public class ATAFleetActivity extends Activity implements View.OnClickListener
 {
     private Button btATASms, btDialNow, btEmailRepairer, btGetDirection;
-
+    List<Vehicle> vehicleList;
 
     @Override
     protected void onStart()
@@ -89,31 +93,53 @@ public class ATAFleetActivity extends Activity implements View.OnClickListener
 
     public void callAppForSentEmail()
     {
-        String subject = "ATT App Report...";
+        String to[] = {"smash@atafleet.com"};
+        String subject = "ATT App Report";
         String message =
-                         "Name: %s\n"
+                "Name: %s\n"
                         + "Phone: %s\n"
                         + "REGO: %s\n"
                         + "Make: %s\n"
                         + "Model: %s\n\n";
-
-        message = String.format(message, Constant.BLANK,
-                Constant.BLANK,
-                Constant.BLANK,
-                Constant.BLANK,
-                Constant.BLANK,
-                Constant.BLANK,
-                Constant.BLANK,
-                Constant.BLANK,
-                Constant.BLANK,
-                Constant.BLANK,
-                Constant.BLANK);
+        getAllDataFromDB();
+        if (vehicleList != null && vehicleList.size() > 0)
+        {
+            Vehicle vehicle = vehicleList.get(0);
+            message = String.format(message,
+                    vehicle.getName(),
+                    vehicle.getYourPhone(),
+                    vehicle.getRego(),
+                    vehicle.getMake(),
+                    vehicle.getModel());
+        }
+        else
+        {
+            message = String.format(message,
+                    Constant.BLANK,
+                    Constant.BLANK,
+                    Constant.BLANK,
+                    Constant.BLANK,
+                    Constant.BLANK);
+        }
 
         Intent emailIntent = new Intent(Intent.ACTION_SEND);
         emailIntent.putExtra(Intent.EXTRA_SUBJECT, subject);
+        emailIntent.putExtra(Intent.EXTRA_EMAIL, to);
         emailIntent.putExtra(Intent.EXTRA_TEXT, message);
         emailIntent.setType("message/rfc822");
-        startActivity(Intent.createChooser(emailIntent, "Complete action using: "));
+        startActivity(Intent.createChooser(emailIntent, "email"));
+    }
+
+    private void getAllDataFromDB()
+    {
+        try
+        {
+            vehicleList = Utils.getHelper(this).getVehicleDAO().queryForAll();
+        }
+        catch (SQLException e)
+        {
+            Log.e("all_in_one", e.getMessage());
+        }
     }
 
 }

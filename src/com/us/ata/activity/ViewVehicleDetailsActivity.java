@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.*;
 import com.us.ata.R;
 import com.us.ata.model.Vehicle;
+import com.us.ata.utils.Constant;
+import com.us.ata.utils.SharedPreferencesManager;
 import com.us.ata.utils.Utils;
 
 import java.sql.SQLException;
@@ -42,7 +44,10 @@ public class ViewVehicleDetailsActivity extends Activity implements View.OnClick
         sizeOfList = vehicleList.size();
         if (sizeOfList > 0)
         {
-            ibtNext.setVisibility(View.VISIBLE);
+            if (sizeOfList > 1)
+            {
+                ibtNext.setVisibility(View.VISIBLE);
+            }
             bindDataOnView(0);
         }
     }
@@ -156,6 +161,14 @@ public class ViewVehicleDetailsActivity extends Activity implements View.OnClick
                 startActivityForResult(regoReminder, ADD_TIME_REMINDER);
                 break;
             case R.id.view_vehicle_detail_btSelect:
+                String name = etName.getText().toString();
+                for (Vehicle vehicle : vehicleList)
+                {
+                    if (name.equals(vehicle.getName()))
+                    {
+                        new SharedPreferencesManager(this).setValue(Constant.VEHICLE_ID, vehicle.getId());
+                    }
+                }
                 finish();
                 break;
         }

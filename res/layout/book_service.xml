@@ -42,7 +42,7 @@
                         android:background="@drawable/left_arrow_mem_detail_2x"
                         android:layout_alignParentLeft="true"
                         android:layout_centerVertical="true"
-                        android:id="@+id/view_vehicle_detail_ibtPrevious"/>
+                        android:id="@+id/book_service_btPrevious"/>
                 <Button
                         android:id="@+id/book_service_btSend"
                         android:layout_width="wrap_content"
@@ -54,7 +54,7 @@
                         android:textSize="@dimen/_20dp"
                         android:minHeight="@dimen/_40dp"/>
                 <Button
-                        android:id="@+id/book_service_btRightSend"
+                        android:id="@+id/book_service_btNext"
                         android:layout_width="@dimen/_40dp"
                         android:visibility="gone"
                         android:layout_height="@dimen/_40dp"
@@ -63,8 +63,8 @@
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"/>
             </RelativeLayout>
-            <EditText
-                    android:id="@+id/book_service_edtKilometer"
+            <TextView
+                    android:id="@+id/book_service_tvKilometer"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     style="@style/text_while"
@@ -72,8 +72,8 @@
                     android:hint="SERVICE TYPE"
                     android:background="@drawable/edt_background"
                     android:layout_marginTop="@dimen/_5dp"/>
-            <EditText
-                    android:id="@+id/book_service_edtBookDate"
+            <TextView
+                    android:id="@+id/book_service_tvBookDate"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     style="@style/text_while"
@@ -83,13 +83,13 @@
                     android:layout_marginTop="@dimen/_5dp"/>
 
             <EditText
-                    android:id="@+id/book_service_edtUnKnow"
+                    android:id="@+id/book_service_edtName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     style="@style/text_while"
                     android:textSize="@dimen/_20dp"
                     android:background="@drawable/edt_background"
-                    android:hint="Witness Email Id"
+                    android:hint="NAME"
                     android:layout_marginTop="@dimen/_5dp"/>
             <EditText
                     android:id="@+id/book_service_edtRego"

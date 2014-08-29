@@ -62,7 +62,10 @@ public class MyWitnessActivity extends Activity implements View.OnClickListener
         sizeOfList = witnesses.size();
         if (witnesses != null && witnesses.size() > 0)
         {
-            btNext.setVisibility(View.VISIBLE);
+            if (sizeOfList > 1)
+            {
+                btNext.setVisibility(View.VISIBLE);
+            }
             bindDataOnView(0);
 
         }
