@@ -76,8 +76,8 @@ public class AccidentDetailActivity extends Activity implements View.OnClickList
 
         Time today = new Time(Time.getCurrentTimezone());
         today.setToNow();
-        tvDate.setText(today.monthDay + "-" + today.month + "-" + today.year);             // Day of the month (1-31)
-        tvTime.setText(today.format("%k-%M-%S"));
+        tvDate.setText(today.monthDay + "-" + (today.month + 1) + "-" + today.year);             // Day of the month (1-31)
+        tvTime.setText(today.format("%k-%M"));
 
     }
 
@@ -273,8 +273,10 @@ public class AccidentDetailActivity extends Activity implements View.OnClickList
                     Constant.BLANK);
             witnessResult = witnessResult + witness;
         }
-        Intent emailIntent = new Intent(Intent.ACTION_SEND_MULTIPLE );
+        Intent emailIntent = new Intent(Intent.ACTION_SEND_MULTIPLE);
         emailIntent.putExtra(Intent.EXTRA_SUBJECT, subject);
+        emailIntent.putExtra(Intent.EXTRA_EMAIL, to);
+        emailIntent.setType("message/rfc822");
         emailIntent.putExtra(Intent.EXTRA_TEXT, message + otherVehicleResult + witnessResult);
         List<Image> images = new ArrayList<Image>();
         try

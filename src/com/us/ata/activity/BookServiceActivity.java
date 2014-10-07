@@ -40,9 +40,10 @@ public class BookServiceActivity extends Activity implements View.OnClickListene
     private EditText edtPhone;
     private EditText edtAddress;
     private EditText edtRegoDate;
-    private EditText edtOtherWork;
+    private TextView tvOtherWork;
     private Button btRightRegoDate;
     private Button btRightOtherWork;
+    private Button btAddNewVehicle;
     ArrayList<ServiceType> serviceTypeArrayList;
     Dialog dialog;
     List<Vehicle> vehicleList;
@@ -58,11 +59,18 @@ public class BookServiceActivity extends Activity implements View.OnClickListene
         sizeOfList = vehicleList.size();
         if (sizeOfList > 0)
         {
+            btAddNewVehicle.setVisibility(View.GONE);
+            findViewById(R.id.book_service_svContent).setVisibility(View.VISIBLE);
             if (sizeOfList > 1)
             {
                 btNext.setVisibility(View.VISIBLE);
             }
             bindDataOnView(0);
+        }
+        else
+        {
+            btAddNewVehicle.setVisibility(View.VISIBLE);
+            findViewById(R.id.book_service_svContent).setVisibility(View.GONE);
         }
 
     }
@@ -101,6 +109,7 @@ public class BookServiceActivity extends Activity implements View.OnClickListene
         btSend = (Button) findViewById(R.id.book_service_btSend);
         btRightRegoDate = (Button) findViewById(R.id.book_service_btRegoDateRight);
         btRightOtherWork = (Button) findViewById(R.id.book_service_btOtherWork);
+        btAddNewVehicle = (Button) findViewById(R.id.book_service_btAddNewVehicle);
 
         tvDistance = (TextView) findViewById(R.id.book_service_tvKilometer);
         tvBookDate = (TextView) findViewById(R.id.book_service_tvBookDate);
@@ -111,7 +120,7 @@ public class BookServiceActivity extends Activity implements View.OnClickListene
         edtPhone = (EditText) findViewById(R.id.book_service_edtYourPhone);
         edtAddress = (EditText) findViewById(R.id.book_service_edtYourAddress);
         edtRegoDate = (EditText) findViewById(R.id.book_service_edtRegoDate);
-        edtOtherWork = (EditText) findViewById(R.id.book_service_edtOtherWork);
+        tvOtherWork = (TextView) findViewById(R.id.book_service_tvOtherWork);
 
         tvDistance.setOnClickListener(this);
         tvBookDate.setOnClickListener(this);
@@ -121,6 +130,7 @@ public class BookServiceActivity extends Activity implements View.OnClickListene
         btNext.setOnClickListener(this);
         btRightRegoDate.setOnClickListener(this);
         btRightOtherWork.setOnClickListener(this);
+        btAddNewVehicle.setOnClickListener(this);
     }
 
     @Override
@@ -177,6 +187,10 @@ public class BookServiceActivity extends Activity implements View.OnClickListene
                     }
                 }
                 break;
+            case R.id.book_service_btAddNewVehicle:
+                Intent vehicleDetail = new Intent(this, AddVehicleActivity.class);
+                startActivity(vehicleDetail);
+                break;
 
         }
     }
@@ -192,7 +206,6 @@ public class BookServiceActivity extends Activity implements View.OnClickListene
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(onItemClickListener);
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        dialog.findViewById(R.id.service_type_btCancel).setOnClickListener(onclickListener);
         dialog.findViewById(R.id.service_type_btSave).setOnClickListener(onclickListener);
         dialog.findViewById(R.id.service_type_btBack).setOnClickListener(onclickListener);
         dialog.show();
@@ -205,11 +218,10 @@ public class BookServiceActivity extends Activity implements View.OnClickListene
         {
             switch (v.getId())
             {
-                case R.id.service_type_btCancel:
                 case R.id.service_type_btBack:
-                    String value = new SharedPreferencesManager(BookServiceActivity.this)
-                            .getString(Constant.VALUE_CURRENT_KEY);
-                    tvDistance.setText(value);
+//                    String value = new SharedPreferencesManager(BookServiceActivity.this)
+//                            .getString(Constant.VALUE_CURRENT_KEY);
+//                    tvDistance.setText(value);
                     dialog.dismiss();
                     break;
                 case R.id.service_type_btSave:
@@ -298,7 +310,7 @@ public class BookServiceActivity extends Activity implements View.OnClickListene
             }
             else if (requestCode == ADD_OTHER_WORK)
             {
-                edtOtherWork.setText(data.getStringExtra("otherWorkResult"));
+                tvOtherWork.setText(data.getStringExtra("otherWorkResult"));
             }
         }
     }
@@ -321,7 +333,7 @@ public class BookServiceActivity extends Activity implements View.OnClickListene
 
         message = String.format(message,
                 tvDistance.getText().toString(),
-                edtOtherWork.getText().toString(),
+                tvOtherWork.getText().toString(),
                 tvBookDate.getText().toString(),
                 etName.getText().toString(),
                 edtRego.getText().toString(),

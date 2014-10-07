@@ -38,10 +38,12 @@
                     android:id="@+id/accident_detail_tvDate"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:gravity="left|center"
                     android:background="@drawable/edt_background"
                     style="@style/text_while"/>
             <TextView
                     android:id="@+id/accident_detail_tvTime"
+                    android:gravity="left|center"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/edt_background"
@@ -61,7 +63,7 @@
                         android:textSize="@dimen/_20dp"
                         android:layout_alignParentLeft="true"
                         android:layout_centerVertical="true"
-                        android:hint="@string/vehicleDetail"
+                        android:text="@string/vehicleDetail"
                         />
                 <ImageView
                         android:id="@+id/accident_detail_ivMyVehicleDetail"
@@ -85,7 +87,7 @@
                         android:layout_centerVertical="true"
                         style="@style/text_while"
                         android:textSize="@dimen/_20dp"
-                        android:hint="@string/addOtherVehicleDetails"
+                        android:text="@string/addOtherVehicleDetails"
                         />
                 <ImageView
                         android:id="@+id/accident_detail_ivAddOtherVehicleDetails"
@@ -109,7 +111,7 @@
                         android:layout_centerVertical="true"
                         style="@style/text_while"
                         android:textSize="@dimen/_20dp"
-                        android:hint="@string/witnesses"
+                        android:text="@string/witnesses"
                         />
                 <ImageView
                         android:id="@+id/accident_detail_ivWitness"
@@ -133,7 +135,7 @@
                         android:layout_centerVertical="true"
                         style="@style/text_while"
                         android:textSize="@dimen/_20dp"
-                        android:hint="@string/police"
+                        android:text="@string/police"
                         />
                 <ImageView
                         android:id="@+id/accident_detail_ivPolice"
@@ -155,6 +157,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentLeft="true"
+                        android:text="0 Photo"
                         android:layout_centerVertical="true"
                         style="@style/text_while"
                         android:textSize="@dimen/_20dp"/>

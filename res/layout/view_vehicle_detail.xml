@@ -61,6 +61,7 @@
             android:layout_height="fill_parent">
         <LinearLayout android:layout_height="match_parent"
                       android:layout_width="match_parent"
+                      android:id="@+id/llContent"
                       android:layout_marginTop="@dimen/_15dp"
                       android:layout_marginLeft="@dimen/_5dp"
                       android:layout_marginRight="@dimen/_5dp"

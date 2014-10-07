@@ -58,16 +58,8 @@
                     android:layout_below="@+id/service_type_llContent"
             >
 
-        <Button
-                android:id="@+id/service_type_btCancel"
-                android:layout_width="@dimen/_60dp"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:text="Cancel"
-                style="@style/TextShowOnButton"
-                android:background="@drawable/bt_green_small"
-                />
-        <Button
+
+    <Button
                 android:id="@+id/service_type_btSave"
                 android:layout_width="@dimen/_60dp"
                 android:layout_height="wrap_content"

@@ -26,6 +26,7 @@ public class ViewVehicleDetailsActivity extends Activity implements View.OnClick
     private Button btSelect, btSave, btDelete;
     private ImageButton ibtPrevious, ibtNext;
     private ImageView btBack;
+    private LinearLayout llContent;
     private EditText etName, etRego, etMake, etModel, etPhone, etAddress,
             etInsuranceComany, etInsurancePhone, etPolicy, etBroker;
     private TextView etRegoDate;
@@ -44,11 +45,18 @@ public class ViewVehicleDetailsActivity extends Activity implements View.OnClick
         sizeOfList = vehicleList.size();
         if (sizeOfList > 0)
         {
+            llContent.setVisibility(View.VISIBLE);
+            btSelect.setVisibility(View.VISIBLE);
             if (sizeOfList > 1)
             {
                 ibtNext.setVisibility(View.VISIBLE);
             }
             bindDataOnView(0);
+        }
+        else
+        {
+            btSelect.setVisibility(View.GONE);
+            llContent.setVisibility(View.GONE);
         }
     }
 
@@ -196,6 +204,7 @@ public class ViewVehicleDetailsActivity extends Activity implements View.OnClick
         btSelect = (Button) findViewById(R.id.view_vehicle_detail_btSelect);
         ibtPrevious = (ImageButton) findViewById(R.id.view_vehicle_detail_ibtPrevious);
         ibtNext = (ImageButton) findViewById(R.id.view_vehicle_detail_ibtNext);
+        llContent = (LinearLayout) findViewById(R.id.llContent);
 
         etRegoDate.setOnClickListener(this);
         btBack.setOnClickListener(this);

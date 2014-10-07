@@ -25,7 +25,19 @@
                 android:text="@string/bookServices"
                 />
     </RelativeLayout>
+    <Button
+            android:id="@+id/book_service_btAddNewVehicle"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="@dimen/_100dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_bt_blue"
+            android:text=" Please add new My Vehicle  "
+            style="@style/text_while"
+            android:textSize="@dimen/_20dp"
+            android:minHeight="@dimen/_40dp"/>
     <ScrollView
+            android:id="@+id/book_service_svContent"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
         <LinearLayout
@@ -69,14 +81,41 @@
                     android:layout_height="wrap_content"
                     style="@style/text_while"
                     android:textSize="@dimen/_20dp"
+                    android:gravity="left|center"
                     android:hint="SERVICE TYPE"
                     android:background="@drawable/edt_background"
                     android:layout_marginTop="@dimen/_5dp"/>
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:background="@drawable/edt_background"
+                    android:layout_marginTop="@dimen/_5dp"
+                    >
+                <TextView
+                        android:id="@+id/book_service_tvOtherWork"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/text_while"
+                        android:textSize="@dimen/_20dp"
+                        android:hint="OTHER WORK"
+                        android:layout_centerVertical="true"
+                        android:background="@null"
+                        />
+                <Button
+                        android:id="@+id/book_service_btOtherWork"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/right_arrow_mem_detail"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"/>
+            </RelativeLayout>
             <TextView
                     android:id="@+id/book_service_tvBookDate"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     style="@style/text_while"
+                    android:gravity="left|center"
                     android:textSize="@dimen/_20dp"
                     android:background="@drawable/edt_background"
                     android:hint="BOOKING DATE"
@@ -141,6 +180,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/edt_background"
                     android:layout_marginTop="@dimen/_5dp"
+                    android:layout_marginBottom="@dimen/_15dp"
                     >
                 <EditText
                         android:id="@+id/book_service_edtRegoDate"
@@ -149,6 +189,7 @@
                         style="@style/text_while"
                         android:textSize="@dimen/_20dp"
                         android:hint="REGO DATE"
+                        android:layout_centerVertical="true"
                         android:background="@null"
                         />
                 <Button
@@ -159,29 +200,7 @@
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"/>
             </RelativeLayout>
-            <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/edt_background"
-                    android:layout_marginTop="@dimen/_5dp"
-                    >
-                <EditText
-                        android:id="@+id/book_service_edtOtherWork"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        style="@style/text_while"
-                        android:textSize="@dimen/_20dp"
-                        android:hint="OTHER WORK"
-                        android:background="@null"
-                        />
-                <Button
-                        android:id="@+id/book_service_btOtherWork"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/right_arrow_mem_detail"
-                        android:layout_alignParentRight="true"
-                        android:layout_centerVertical="true"/>
-            </RelativeLayout>
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
